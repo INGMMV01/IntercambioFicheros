@@ -1,0 +1,66 @@
+# Definición de los jobs para generar el frontal ITEMCGDN
+
+.ITEMCGDN:default:
+  variables:
+    ITEM_CGDN: "ITEMCGDN" # Completar con el código CGDN del item que se construye
+    WORKSPACE_NAME: 'ITEMCGDN'  
+    LIBRARY_NAME: 'production' 
+    PACKAGE_UPLOAD: 'all' 
+
+ITEMCGDN:prepare-dependencies:
+  extends:
+    - .ng:prepare-dependencies
+    - .ITEMCGDN:default
+
+ITEMCGDN:build:
+  extends:
+    - .ng:build
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:prepare-dependencies
+
+ITEMCGDN:test:
+  extends:
+    - .ng:test
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:build
+
+ITEMCGDN:lint:
+  extends:
+    - .ng:lint
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:build
+
+ITEMCGDN:package:
+  extends:
+    - .ng:package
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:lint
+    - job: ITEMCGDN:test
+    - job: ITEMCGDN:build
+
+ITEMCGDN:metrics:
+  extends:
+    - .ng:metrics
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:package
+
+ITEMCGDN:publish:
+  extends:
+    - .ng:publish
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:metrics
+
+ITEMCGDN:deploy:
+  extends:
+    - .ng:deploy
+    - .ITEMCGDN:default
+  needs:
+    - job: ITEMCGDN:publish
+      artifacts: false
+

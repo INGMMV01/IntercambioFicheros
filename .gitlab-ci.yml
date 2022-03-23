@@ -1,0 +1,17 @@
+# Este fichero realiza la importación de los archivos (de plantillas y locales) necesarios para la construcción de la pipeline definitiva
+include:    
+    #Para añadir ficheros .yml ubicados en el mismo repositorio:
+  - local: frontend/.gitlab-ci.yml
+    #Para añadir templates almacenados en otro repositorio:
+  - project: $CICD_TEMPLATES_PROJECT
+    ref: $CICD_TEMPLATES_REF
+    file: general/stages.yml #Nombre del archivo .yml
+ 
+  - project: $CICD_TEMPLATES_PROJECT
+    ref: $CICD_TEMPLATES_REF #Nombre de la rama, commit SHA o version, por defecto apunta a HEAD
+    file: jobs/pages.yml #Nombre del archivo .yml
+
+  - project: $CICD_TEMPLATES_PROJECT
+    ref: $CICD_TEMPLATES_REF #Nombre de la rama, commit SHA o version, por defecto apunta a HEAD
+    file: jobs/angular.yml #Nombre del archivo .yml
+
