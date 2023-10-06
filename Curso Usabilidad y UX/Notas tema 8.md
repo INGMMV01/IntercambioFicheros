@@ -13,3 +13,6 @@ https://olgacarreras.blogspot.com/
 y algunas herramientas para buscar textos alternativos:
 - árbol de decisión: https://www.usableyaccesible.com/textosalternativosaccesibles/mapa_decision_texto_alternativo.php
 - wizard: https://www.usableyaccesible.com/textosalternativosaccesibles/texto_alternativo_wizard2.php
+
+### Relaciones
+[[8 - accesibilidad Introduccion y usuarios.pdf]]

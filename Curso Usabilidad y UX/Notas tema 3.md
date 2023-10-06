@@ -34,3 +34,6 @@
 		- enlazar las mínimas palabras en lugar de frases: "**haz click aquí para comprar**" vs "**comprar** este producto"
 		- 
 		- 
+
+### Relaciones
+[[3 - Arquitectura informacion (1).pdf]]

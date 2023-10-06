@@ -24,3 +24,5 @@ Se refiere a sesgos psicológicos de los usuarios y cómo evitarlos o usarlos en
 	- Los usuarios perciben como más fáciles de usar los diseños más agradables y los hace más permisivos con los errores
 	- Humor y cercanía en las páginas de errores o temas confusos (procesos complejos)
 
+### Relaciones
+[[5 - Percepcion, diseño y ergonomía.pdf]]

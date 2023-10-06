@@ -31,11 +31,16 @@ https://github.com/IvanciniGT/formacionTDD
 - HA (alta disponibilidad)
 - UX
 
-[[DevOps]]
+
 
 # TDD
 Metodología de desarrollo: pruebas primero + refactorización
 
 # Software
 * cucumber
-* 
+
+### Relaciones
+[[DevOps]]
+[[mis conclusiones curso TDD]]
+[[Material Curso]]
+[[Agilidad]]

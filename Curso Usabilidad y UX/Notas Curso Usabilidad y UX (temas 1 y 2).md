@@ -87,4 +87,7 @@ Una primera impresión rápida te ubica en la página, sabes de qué va, cuál e
 
 # Libros: bibliografía
 - No me hagas pensar
-- 
+
+### Relaciones
+[[1 - UX y heuristicos de Nielsen.pdf]]
+[[2 - Test usuarios y analitica.pdf]]
