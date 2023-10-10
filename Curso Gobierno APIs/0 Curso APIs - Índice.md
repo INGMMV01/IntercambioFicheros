@@ -6,6 +6,8 @@
 - RAML y OpenApi
 - Herramientas: SoapUI y Postman
 ### Referencias
+[[1 notas filosofía API]]
+[[2. notas gobierno de API]]
 
 ### Bibliografía
 
