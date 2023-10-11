@@ -1,0 +1,113 @@
+openapi: "3.0.3"
+info:
+  title: API para la gestión de documentos
+  version: "1.0"
+servers:
+  - url: https://api.documentos/v1
+tags:
+  - name: facturas
+    description: Gestión de facturas
+  - name: albaranes
+    description: Gestión de albaranes
+paths:
+  /facturas:
+    put:
+      tags:
+        - facturas
+      summary: Actualizar una factura
+      description: Actualizar una factura por Id
+      operationId: actualizarFactura
+      requestBody:
+        description: Actualizar una factura
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Factura"
+        required: true
+      responses:
+        "200":
+          description: Operación correcta
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Factura"
+        "400":
+          description: Id no válido
+        "404":
+          description: Factura no encontrada
+    post:
+      tags:
+        - facturas
+      summary: Crear una nueva factura
+      description: Crear una nueva factura
+      operationId: crearFactura
+      requestBody:
+        description: Crear una nueva factura
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Factura"
+        required: true
+      responses:
+        "200":
+          description: Operación correcta
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Factura"
+
+        "405":
+          description: Entrada no válida
+  /facturas/{facturaId}:
+    get:
+      tags:
+        - facturas
+      description: Recuperar factura por id
+      parameters:
+        - name: facturaId
+          description: Identificador de la factura
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Factura'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Factura'
+        '400':
+          description: Id no válido
+        '404':
+          description: Factura no encontrada
+components:
+  schemas:
+    Documento:
+      type: object
+      required:
+        - "id"
+      properties:
+        id:
+          type: integer
+          format: int64
+        descripcion:
+          type: string
+          default: "Documento de la organización"
+    Factura:
+      allOf:
+        - $ref: "#/components/schemas/Documento"
+        - type: object
+          required:
+            - concepto
+            - importe
+          properties:
+            concepto:
+              type: string
+              default: "Acción formativa: Desarrollo en Java"
+            importe:
+              type: number
+              default: 3444.98

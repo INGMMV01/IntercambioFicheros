@@ -1,3 +1,7 @@
+
+##### Referencia
+[[3. RAML.pdf]]
+
 Todo software que se comunica con otro tiene algún tipo de acoplamiento: fuerte o débil
 El acoplamiento positivo es aquel que diseña un sistema antes de implementarlo
 Contract first - API first

@@ -8,16 +8,13 @@
 ### Referencias
 [[1 notas filosofía API]]
 [[2. notas gobierno de API]]
+[[3 Notas RAML Diseño]]
+[[4 notas Swagger]]
+[[5 notas Testing]]
 
 ### Bibliografía
-
-### Objetivos/Dudas
-- editor
-- estándar
-- [ ] Uso y estructura de Postman
-- [ ] 
-
-
+[[API_TESTING_AND_DEVELOPMENT_WITH_POSTMAN.pdf]]
+[[ENTERPRISE_API_MANAGEMENT.pdf]]
 
 ### Acceso
 https://cleformacion.com/
