@@ -1,0 +1,169 @@
+#%RAML 1.0
+--- 
+# paso 1: cabecera
+title: "API para la gestión de facturas de la organización"
+version: 1.0
+baseUri: "https://empresa.com/{version}"
+protocols: [HTTPS]
+documentation: 
+- title: "API para la gestión de facturas de la organización"
+
+#paso 6: Types
+types: 
+  factura:
+    type: object
+    properties: 
+      idFactura:
+        type: integer
+        required: true        
+      concepto:
+        type: string
+      importe:
+        type: number
+      cif: 
+        type: string
+      fecha?: 
+        type: datetime
+  
+  Mensaje:
+    type: object
+    titulo: 
+
+
+  Albarán:
+    type: object
+    properties: 
+      idAlbarán:
+        type: integer
+        required: true        
+      concepto:
+        type: string
+      importe:
+        type: number
+      cif: 
+        type: string
+      fecha?: 
+        type: datetime
+  
+  Mensaje:
+    type: object
+    titulo: 
+
+
+
+
+#paso 2: recursos
+/documentos:
+  #paso 4: método
+  get:
+    description: Obtener todas las facturas de forma paginada    
+    #paso 5: queryParameters
+    queryparameters:    
+      offset:
+        displayName: Offset
+        type: Integer
+        description: Número de página
+        required: true
+      size:
+        displayName: Tamaño de la página
+        type: Integer
+        description: tamaño de la página
+        required: true                
+    #paso 6: respuestas
+    responses: 
+      200:
+        description: La operación se ha realizado con éxito
+        body: 
+          application/json:
+          type: factura []
+            properties: 
+              mensaje: 
+                    
+      404:
+              
+  post:            
+    description: Crear factura
+    body: 
+      application/json:
+      type: factura
+    responses: 
+      200:
+      201:
+        body: 
+          description: "la que sea"
+          type: Mensaje
+      404:
+        body: 
+          description: "El recurso no ha sido encontrado"
+          type: Mensaje
+          
+      
+                                      
+
+  #paso 3: subrecursos
+  /{facturaId}: 
+      get:
+          description: Obtener una factura por id
+      put:
+          description: actualizar una factura por id
+      delete:
+          description: Eliminar una factura por id
+
+
+
+#paso 7: repito facturas como albaranes
+/documentos:
+  #paso 4: método
+  get:
+    description: Obtener todas las Albaráns de forma paginada    
+    #paso 5: queryParameters
+    queryparameters:    
+      offset:
+        displayName: Offset
+        type: Integer
+        description: Número de página
+        required: true
+      size:
+        displayName: Tamaño de la página
+        type: Integer
+        description: tamaño de la página
+        required: true                
+    #paso 6: respuestas
+    responses: 
+      200:
+        description: La operación se ha realizado con éxito
+        body: 
+          application/json:
+          type: Albarán []
+            properties: 
+              mensaje: 
+                    
+      404:
+              
+  post:            
+    description: Crear Albarán
+    body: 
+      application/json:
+      type: Albarán
+    responses: 
+      200:
+      201:
+        body: 
+          description: "la que sea"
+          type: Mensaje
+      404:
+        body: 
+          description: "El recurso no ha sido encontrado"
+          type: Mensaje
+          
+      
+                                      
+
+  #paso 3: subrecursos
+  /{AlbaránId}: 
+      get:
+          description: Obtener una Albarán por id
+      put:
+          description: actualizar una Albarán por id
+      delete:
+          description: Eliminar una Albarán por id
