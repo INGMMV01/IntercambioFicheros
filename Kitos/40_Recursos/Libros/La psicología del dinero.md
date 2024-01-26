@@ -21,5 +21,15 @@ Para el caso del dinero hay gente que ha vivido grandes inflaciones, tipos de in
 ## Capítulo 2: Suerte y riesgo
 Nada es tan bueno ni tan malo como parece.
 La suerte y el riesgo son la demostración de que gran parte del resultado de un evento depende de fuerzas ajenas a uno mismo.
-
 Suponer que lo bueno o malo que te pase, que el resultado que obtienes es únicamente fruto de tu esfuerzo, conocimiento, trabajo o sacrificio es dejar fuera todos los millones de variables, personas, objetos en movimiento que están en tu misma partida y sobre las que no tienes ningún control.
+Solemos juzgar de modo distinto nuestros éxitos (mérito) que el de los demás (suerte) e igual para los fracasos sin tener en cuenta el azar o los imponderables. Siempre encontraremos un relato que apoye nuestro prejuicio.
+En ocasiones la misma jugada, con el mismo argumento, el mismo escenario obtienen resultados distintos. Del mismo modo acciones exitosas en el pasado pueden resultar en fracasos en el futuro.
+
+## Capítulo 3: No tener nunca suficiente. Cuando los ricos hacen locuras
+Para ganar un dinero que no tenían y no necesitaban arriesgaron un dinero que tenían y necesitaban.
+Mucha gente no sabe cuando parar y, por pura ambición o avaricia arriesgan más de lo que pueden ganar o cometen delitos por conseguir más sin que eso realmente marque la diferencia. Beneficio marginal: Pasar de 1000 a 2000 es una gran diferencia pero pasar de 500.000 a 501.000 no es igual. Cuanto más alto estás el beneficio por unidad es menor. Hay que saber evaluarlo antes de tomar riesgos.
+Objetivos:
+- Conseguir que la meta deje de moverse
+- El problema es la comparación social: es una batalla que nunca se puede ganar y siempre causará insatisfacción 
+- Suficiente no significa demasiado poco: No hay que ser poco ambicioso. Suficiente significa que seguir será peligroso o demasiado arriesgado
+- Hay cosas por las que no merece la pena el riesgo independientemente del posible beneficio
