@@ -41,5 +41,43 @@ Objetivos:
 El interés compuesto no es nada intuitivo. Nuestra mente está acostumbrada a tener un pensamiento lineal y le cuesta comprender un crecimiento exponencial según va avanzando, en este caso, el tiempo.
 Alguno de los grandes inversores y millonarios de la industria no lo son únicamente por sus grandes rentabilidades sino por ser inversores medios durante muchísimos años. Dicho de otro modo: es más interesante un rendimiento razonable y sostenido a lo largo de mucho tiempo que un rendimiento extraordinario en un período corto.
 
+## Capítulo 5: Hacerse rico frente a conservar la riqueza
+
+Palabra clave: supervivencia
+Las habilidades y estrategias para hacer o ganar dinero no son las mismas que para conservarla y mantenerse a flote.
+Para ganar dinero hace falta un emprendimiento y una exposición a riesgo altas mientras que la conservación es justo lo contrario: el miedo y la paranoia.
+En el libro se ponen varios ejemplos relacionados con el capítulo 3 sobre gente que arriesgó demasiado cuando ya tiene una cartera y el riesgo fue mayor que el potencial de subida. Por otro lado, la gente que es más cauta sobrevive a todos los vaivenes de crisis, inflación, caídas...
+No puedes prosperar ni hacer crecer tu cartera a lo largo del tiempo (capítulo 4) si por una mala jugada te quedas fuera de la partida. Por eso tiene sentido ir cambiar de estrategia en función de la altura. Si el mayor ingrediente del éxito es el tiempo, es mejor hacer rendimientos razonables y sostenidos que grandes rentabilidades momentáneas.
+Algunas reglas:
+- Quiero conseguir buenos beneficios pero quiero ser inquebrantable: En ocasiones es mejor dejar pasar buenas posibilidades si eso te mantiene más estable. Tener un poco de liquidez, aún con coste de rentabilidad, hará que no tengas que vender cartera en malos momentos y posibilidad de entrar en un momento mejor
+- Planificar es importante pero la más importante es planificar para cuando el plan no vaya según lo planificado: Ser resiliente, dejar holguras en cada previsión y tolerar grandes márgenes de error. Cuantos más elementos específicos necesitas para que se cumpla el plan, más frágil se vuelve. No puedes esperar que todo vaya según tu escenario ideal. 
+Esto no es lo mismo que ser conservador. Ser conservador sería no asumir riesgos. Tener holguras y dejar márgenes de error da a tu plan mayor seguridad y probabilidad de permanecer en el juego.
+- Es importante ser optimista hacia el futuro pero paranoico hacia lo que te va a impedir llegar a ese futuro. Tener holguras te permite soportar vaivenes sin entrar en pánico. Si tu plan está demasiado ajustado es probable que en una gran caída debas deshacer cartera. Vender en momentos de crisis en lugar de mantenerte o incluso aumentar cartera es una mala práctica en general. Hay que darse cuenta que, en el largo plazo, habrá muchos momentos negativos como crisis, enfermedades, fenómenos naturales, terrorismo que deberás soportar.
+- 
+
+## Capítulo 6: Cruz, tú ganas
+
+Puedes equivocarte la mitad de las veces y, aún así, ganar la mayoría de las veces.
+La mayoría de empresas, fondos, índices, inversores obtienen la mayoría de su rentabilidad de unos pocos casos extraordinarios.
+Es normal tener que ensayar y fracasar antes de lograr algún gran éxito y éste es el que marca la diferencia. No puedes aspirar a acertar siempre ni siquiera la mayoría de las veces, esto no está ni siquiera al alcance de los más grandes. A lo que se debe aspirar es a que salgan bien la mitad de las oportunidades y que, cada una de ellas ganas mucho más de lo que pierdes en cada fracaso.
+Esta estrategia aboga por abarcar bastante, por ejemplo en índices sabiendo que un porcentaje pequeño de los casos serán éxito pero esos éxitos generarán la mayoría de la rentabilidad.
+Cuando una empresa tiene demasiados éxitos podría interpretarse como que no está investigando o arriesgando lo suficiente. Se ponen de ejemplo casos como inversores en arte o grandes compañías tecnológicas, como Amazon o Netflix, donde, a pesar de tener sonoros fracasos consiguen grandes rentabilidades gracias a sucesos extremos.
+Los sucesos extremos son fundamentales pero son realmente difíciles de cazar. Por ese motivo tiene sentido tener una gran diversificación aceptando muchos fracasos con pérdidas asumibles y algunos éxitos con rentabilidades enormes.
+
+## Capítulo 7: Libertad
+
+Tener dinero no sirve únicamente para poder comprarse cosas, sirve para tener libertad de elección y tiempo para ejercerla. Poder decidir qué hacer, cuándo o cómo hacerlo es un gran generador de felicidad.
+Uno de los mayores disparadores de la felicidad es la impresión de autocontrol sobre tu vida. Saber que puedes elegir en lugar de sentirte obligado con un trabajo o con unos pagos te da control y autonomía.
+Las últimas generaciones han cambiado tiempo por dinero. En generaciones anteriores, aunque se trabajaba de media más horas, el trabajo se terminaba al dejar la oficina o la fábrica. En la actualidad, con las herramientas de las que disponemos, el trabajo se ha ampliado más allá de un lugar físico y más allá de un horario determinado. Este comportamiento en busca de la eficiencia y del rendimiento se justifica por la tecnología pero también por la ambición de la gente y por la necesidad de hacer frente a mayores pagos tras comprometerse con mayores gastos como casas, coches, ropa, joyas...
+
+## Capítulo 8: La paradoja del hombre y el coche
+
+A nadie le impresiona tanto lo que posees como a ti mismo.
+Habitualmente la gente tiende a querer riqueza como demostración de riqueza o estatus o para conseguir respeto y admiración pero, en realidad, apenas nadie se fija en las personas sino en los bienes.
+Hacer grandes demostraciones de riqueza no consigue de los demás lo que buscas.
+
+## Capítulo 9: La riqueza es lo que no se ve
+
+Gastar dinero para demostrar a la gente cuánto dinero tienes es la forma más rápida de tener menos dinero.
 
 
