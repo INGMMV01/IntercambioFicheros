@@ -79,5 +79,7 @@ Hacer grandes demostraciones de riqueza no consigue de los demás lo que buscas.
 ## Capítulo 9: La riqueza es lo que no se ve
 
 Gastar dinero para demostrar a la gente cuánto dinero tienes es la forma más rápida de tener menos dinero.
+La riqueza no es el dinero que tienes, es la opcionalidad que te da el poder gastarlo si fuese necesario o guardarlo para obtener más seguridad y libertad. Comprar bienes a cambio de dinero te da esos bienes pero te resta ese dinero y, por tanto, te resta libertad. 
+La gente rica no suele ser ostentosa por que no lo necesita. Solo es ostentosa la gente que necesita señalizarse y obtener estatus o respeto.
 
 
