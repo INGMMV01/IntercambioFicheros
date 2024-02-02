@@ -79,7 +79,17 @@ Hacer grandes demostraciones de riqueza no consigue de los demás lo que buscas.
 ## Capítulo 9: La riqueza es lo que no se ve
 
 Gastar dinero para demostrar a la gente cuánto dinero tienes es la forma más rápida de tener menos dinero.
-La riqueza no es el dinero que tienes, es la opcionalidad que te da el poder gastarlo si fuese necesario o guardarlo para obtener más seguridad y libertad. Comprar bienes a cambio de dinero te da esos bienes pero te resta ese dinero y, por tanto, te resta libertad. 
-La gente rica no suele ser ostentosa por que no lo necesita. Solo es ostentosa la gente que necesita señalizarse y obtener estatus o respeto.
 
+La riqueza no es el dinero que tienes, es la opcionalidad que te da el poder gastarlo si fuese necesario o guardarlo para obtener más seguridad y libertad. Comprar bienes innecesarios a cambio de dinero, te resta libertad. La riqueza son los gastos que no has hecho. Son los activos financieros que no has convertido en bienes.
+La riqueza requiere autocontrol y crea una brecha entre lo que puedes hacer y lo que decides hacer. Esa brecha se acumula y aumenta a lo largo del tiempo. La riqueza es la diferencia entre su salario y tu ego.
+
+Cuando la gente dice que quiere ser rica, lo que quiere en realidad es comprar cosas caras pero eso es lo contrario de ser rico. Gastar el dinero que no tienes es exactamente lo contrario de la riqueza.
+Hay que saber diferenciar entre tener dinero y ser rico: puedes tener dinero porque tienes una gran nómina y gastarlo todo. Por otra parte, ser rico, acumular capital es justo lo contrario y mucho más discreto.
+
+La gente rica no suele ser ostentosa porque no lo necesita. Solo es ostentosa la gente que necesita señalizarse y obtener estatus o respeto.
+
+A la gente con dinero se la ve porque hacen que se les vea pero a la gente rica realmente no se la ve porque la propia naturaleza de la riqueza es la discreción. 
+La gente habitualmente aprende por imitación y un hábito tan oculto como la riqueza se hace difícil de ver y aprender de él. Por eso es importante la divulgación
+
+## Capítulo 10: Ahorro
 
