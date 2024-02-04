@@ -93,3 +93,8 @@ La gente habitualmente aprende por imitación y un hábito tan oculto como la ri
 
 ## Capítulo 10: Ahorro
 
+Ahorrar es la parte subte la que tienes más control en la ecuación del dinero Eficiencia El valor de la riqueza es relativo a lo que necesitas Pirámide de Maslow necesario comodidad entretenimiento y formación Los ahorras son la diferencia entre tu ego y tus ingresos Se generan ahorros gastando menos gastas menos si deseas menos y deseas menos si no te importa lo que piensan de ti Ahorrar es una cobertura conta las sorpresas, no hace falta más objetivo Obtener más control subir ti tiempo La la rentabilidad de los de los guardado no siempre se puede medir como los intereses de un banco o un tanto por ciento pero tienen un gran beneficio cuando te dan tranquilidad o la opcionalidad de usarlos en un momento adecuado por ejemplo para hacer una gran inversión en el mejor momento El ahorro depende más de la psicología que de las finanzas La flexibilidad es un valor diferencial. Ser capaz de esperar o adaptarte puede darte acceso a ventajas que la gente que no tiene está oportunidad no podrá disponer
+
+## Capítulo 11: Mejor razonable que racional
+
+ Ser razonable es más realista Lo óptimo VS lo bueno. Ganar tranquilidad. Sacrificar un poco de rentabilidad a cambio de reducir riesgos Algo puede ser técnicamente cierto pero contextualmente absurdo Parece que lo profesional es no tener emociones con las inversiones pero la realidad es que es lo más importante. Lo más importante es no quedarte fuera del juego Sesgos. La vida no siempre es coherente
