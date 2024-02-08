@@ -93,8 +93,25 @@ La gente habitualmente aprende por imitación y un hábito tan oculto como la ri
 
 ## Capítulo 10: Ahorro
 
-Ahorrar es la parte subte la que tienes más control en la ecuación del dinero Eficiencia El valor de la riqueza es relativo a lo que necesitas Pirámide de Maslow necesario comodidad entretenimiento y formación Los ahorras son la diferencia entre tu ego y tus ingresos Se generan ahorros gastando menos gastas menos si deseas menos y deseas menos si no te importa lo que piensan de ti Ahorrar es una cobertura conta las sorpresas, no hace falta más objetivo Obtener más control subir ti tiempo La la rentabilidad de los de los guardado no siempre se puede medir como los intereses de un banco o un tanto por ciento pero tienen un gran beneficio cuando te dan tranquilidad o la opcionalidad de usarlos en un momento adecuado por ejemplo para hacer una gran inversión en el mejor momento El ahorro depende más de la psicología que de las finanzas La flexibilidad es un valor diferencial. Ser capaz de esperar o adaptarte puede darte acceso a ventajas que la gente que no tiene está oportunidad no podrá disponer
+Ahorrar es la parte sobre la que tienes más control en la ecuación del dinero. Ganas más no siempre es posible y depende de muchos factores (laborales, edad, paro) pero tienes más control sobre la parte de reducir gastos o mejorar ahorro.
+*Patrimonio = Ingresos - Gastos (inversa del ahorro)*
+El ahorro es una medida de la eficiencia. Necesitar menos para vivir. El valor de la riqueza es relativo a lo que necesitas. Según la pirámide de Maslow lo primero y más necesario es la alimentación, seguridad y por último comodidad, entretenimiento y formación. Debes controlar los gastos superfluos.
+
+Los ahorras son la diferencia entre tu ego y tus ingresos 
+Se generan ahorros gastando menos; gastas menos si deseas menos; deseas menos si no te importa lo que piensan de ti. El ahorro depende más de la psicología que de las finanzas.
+
+Ahorrar es una cobertura contra las sorpresas, no hace falta más objetivo. Sirven para obtener más control sobre tu tiempo.
+La rentabilidad de lo guardado no siempre se puede medir como los intereses de un banco o un tanto por ciento pero tienen un gran beneficio cuando te dan tranquilidad u opcionalidad de usarlos en un momento adecuado, por ejemplo para hacer una gran inversión en el mejor momento.
+La flexibilidad es un valor diferencial. Ser capaz de esperar o adaptarte puede darte acceso a ventajas que la gente que no tiene está opción no podrá disponer.
 
 ## Capítulo 11: Mejor razonable que racional
 
- Ser razonable es más realista Lo óptimo VS lo bueno. Ganar tranquilidad. Sacrificar un poco de rentabilidad a cambio de reducir riesgos Algo puede ser técnicamente cierto pero contextualmente absurdo Parece que lo profesional es no tener emociones con las inversiones pero la realidad es que es lo más importante. Lo más importante es no quedarte fuera del juego Sesgos. La vida no siempre es coherente
+ Ser razonable es más realista.
+ En ocasiones es más realista hacer lo bueno que lo óptimo cuando ésto es algo que no te proporciona tranquilidad u opcionalidad.
+ Sacrificar un poco de rentabilidad a cambio de reducir riesgos. Algo puede ser técnicamente cierto pero contextualmente absurdo.
+ Parece que lo profesional es no tener emociones con las inversiones pero la realidad es que es lo más importante. 
+ Lo más importante es no quedarte fuera del juego y una jugada que parece racional puede salir mal y dejar te fuera. Lo razonable puede ser menos óptimo pero más adecuado.
+ Todos tenemos sesgos. La vida no siempre es coherente.
+
+## Capítulo 12: Sorpresa
+
