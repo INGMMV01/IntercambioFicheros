@@ -115,3 +115,11 @@ La flexibilidad es un valor diferencial. Ser capaz de esperar o adaptarte puede 
 
 ## Capítulo 12: Sorpresa
 
+El estudio de la historia nos señala que siempre ha habido sorpresas y sucesos extraordinarios que lo han cambiado todo sin precedentes o situaciones similares. El estudio de la historia es interesante para encontrar patrones y quizás estar preparado para algunas situaciones pero puede llevar a la conclusión errónea de que sabemos cómo predecir el futuro o saber cómo reaccionar a sucesos futuros.
+La conclusión más fiable sobre el estudio de las sorpresas no es saber cómo reaccionar ante ellas sino la propia existencia de las sorpresas: Todo el rato están ocurriendo millones de eventos que actúan sobre otros eventos y que pueden tener consecuencias nunca antes vistas para las que no estamos preparados.
+Las conclusiones obtenidas sobre datos en un momento determinado de la historia pueden quedar obsoletas con nuevos datos y nuevos sucesos. En este caso se pone como ejemplo el libro "El inversor inteligente" de Benjamin Graham que, siendo un referente del sector tiene muchas ideas y herramientas que ya no aplican porque las circunstancias han cambiado.
+La idea del capítulo es que todo cambia y que hay que tener flexibilidad y holgura ante cualquier nuevo evento que con toda seguridad ocurrirá sin haber dado pistas ni tener precedentes.
+
+
+
+
