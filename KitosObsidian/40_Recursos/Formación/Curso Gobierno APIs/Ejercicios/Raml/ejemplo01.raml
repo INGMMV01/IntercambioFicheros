@@ -1,0 +1,49 @@
+#%RAML 1.0
+--- 
+title: "Mi primera API"
+version: 1.0
+baseUri: "https://miprimeraapi.com/{version}"
+protocols: [HTTPS]
+documentation: 
+  - title: "Titulo relacionado con la documentación del usuario"
+    content: |
+      Va a ocupar mas
+      de una linea
+
+# Definicion de recursos
+
+# https://miprimeraapi.com/1.0/helloworld
+/helloworld:
+  description: |
+    Este es un ejemplo para ilustrar
+    la definicion de un recursos
+  displayName: "Operación para decir hola"
+  get: 
+    queryParameters: 
+      page:
+        description: "Número de página"
+        type: integer
+        required: true
+      per_page:
+        description: "Tamaño de la página"
+        type: integer
+        required: true
+
+  post: 
+    body: 
+      application/json:
+        properties: 
+          message: 
+
+  delete: 
+
+
+  # https://miprimeraapi.com/1.0/helloworld/message
+  /message:
+  # https://miprimeraapi.com/1.0/helloworld/message/data
+    /data:
+
+  # https://miprimeraapi.com/1.0/helloworld/hi
+  /{saludo}:
+
+

@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "712826ea-8085-4b58-8594-b999188c523d",
+		"name": "07 Más tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5387577"
+	},
+	"item": [
+		{
+			"name": "Get People",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Código de estado 200\", ()=>{",
+							"    pm.response.to.have.status(200);",
+							"    console.log(\"Ejecutando Código de estado 200.\")",
+							"});",
+							"",
+							"pm.test(\"La respuesta contiene un determinado texto\", ()=>{",
+							"    pm.expect(pm.response.text()).to.include(\"Luke\"); ",
+							"});",
+							"",
+							"pm.test(\"Comprobando valores del cuerpo de la respuesta\", ()=>{",
+							"    pm.expect(pm.response.json().height).to.eql(\"172\");",
+							"});",
+							"",
+							"pm.test(\"Comprobando si la respuesta incluye una cabecera\", ()=>{",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Número de peliculas\", ()=>{",
+							"    pm.expect(pm.response.json().films.length).to.eql(4);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/people/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://swapi.dev/api"
+		}
+	]
+}
