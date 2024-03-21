@@ -123,5 +123,36 @@ Las conclusiones obtenidas sobre datos en un momento determinado de la historia 
 La idea del capítulo es que todo cambia y que hay que tener flexibilidad y holgura ante cualquier nuevo evento que con toda seguridad ocurrirá sin haber dado pistas ni tener precedentes.
 
 
-## Capítulo 13: 
+## Capítulo 13: El margen de error
+
+La parte más importante de cualquier plan es planificar para cuando el plan no vaya según lo planificado.
+No hay certezas en casi ningún aspecto de la vida, incluida la economía. Por eso no se juega con seguridades, se juega con probabilidades. La incertidumbre, la aleatoriedad y probabilidad siempre está presente. La única forma de manejarlas es aumentando la diferencia entre lo que piensas que va a ocurrir y lo que puede ocurrir mientras conservas la capacidad de luchar un día más.
+
+El propósito del margen de seguridad es hacer que los pronósticos sean innecesarios. 
+El margen de error, margen de seguridad o redundancia ayuda a manejar situaciones completamente inesperadas o muy poco probables.
+
+El margen de error significa tener tolerancia para soportar eventos fuera del estándar. Ser pesimista en el cálculo de escenario y estar preparado o hacer reservas para esos casos.
+
+Tiene mala fama porque asume que no sabemos lo que va a pasar o que no somos capaces de evaluar bien los riesgos pero, tener este margen, permite sobrevivir a situaciones que sacan a otros del mercado o dar posibilidades que otros no pueden alcanzar.
+
+###### Volatilidad
+Quizás piensas que tienes tolerancia a la volatilidad porque piensas que una probabilidad de pérdida de un 30% es asumible vista en un excel pero, si esa situación llega, ¿cómo estarás emocionalmente? 
+La diferencia entre lo que puedes resistir técnicamente y emocionalmente es algo realmente importante a favor del margen de error
+
+###### Ahorrar para la jubilación o evento
+Puede que tu jubilación llegue en un momento inoportuno para los mercados y que te veas obligado a vender en un mercado bajista. O que el mercado te saque del juego y no te permita invertir en momentos propicios.
+Ser pesimista en los cálculos de rentabilidad puede hacerte ahorrar más y ampliar tu margen de seguridad o colchón. Si todo va según lo previsto, te llevarás una agradable sorpresa.
+
+###### Ruleta rusa:
+Es distinto asumir riesgo que arriesgarte a arruinarte. Hay que ver que la potencial ganancia, aunque con probabilidad alta, es suficientemente buena. Si la parte potencialmente negativa es mayor, no vale la pena.
+El apalancamiento es el demonio. Si algo va mal, perderás tu bien y aún deberás dinero y no te permitirá volver a la partida cuando sea propicio.
+
+El autor divide su cartera en dos, una ultra conservadora y la otra con riesgo.
+
+Otras ventajas:
+Ayuda a protegerte de cosas que nunca podrías prever.
+Todo lo que puede fallar, fallará
+Si un sistema hace que otros dependan de él, un fallo en este, puede provocar una reacción en cadena
+
+## Capítulo 14: Vas a cambiar
 
