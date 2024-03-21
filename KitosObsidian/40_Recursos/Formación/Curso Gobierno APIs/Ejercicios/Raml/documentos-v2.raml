@@ -1,0 +1,118 @@
+#%RAML 1.0
+--- 
+title: "API para la gestión de documentos de la organización"
+version: 1.0
+baseUri: "https://empresa.com/{version}"
+protocols: [HTTPS]
+documentation: 
+  - title: "API para la gestión de documentos de la organización"
+mediaType: application/json
+types: 
+  Documento:
+    type: object
+    properties:
+      id:
+        description: Identificador único del documento
+        displayName: Identificador del documento
+        type: number
+        required: true
+      descripcion?: string
+  Factura:
+    type: Documento
+    properties:
+      concepto:
+        type: string
+      importe:
+        type: number
+      cif:
+        type: string
+      fecha?:
+        type: date-only
+      direccion?: string
+  Albaran:
+    type: Documento
+    properties:
+      nota:
+        type: string
+      importe:
+        type: number
+  Mensaje:
+    type: object
+    properties: 
+      titulo:
+        type: string
+        required: true 
+      descripcion:
+        type: string
+        required: true
+      documento:
+        type: Documento
+        required: true
+
+resourceTypes: 
+  coleccion:
+    usage: Tipo de recurso para trabajar con colecciones de datos
+    description: Una coleccion de <<resourcePathName>>
+    get:
+      description: Recuperar todas las <<resourcePathName>> de forma paginada
+      queryParameters: 
+        offset:
+          displayName: Offset
+          type: integer
+          description: Número de página a la que vamos a acceder
+          required: true
+        size:
+          displayName: Tamaño de la página
+          type: integer
+          description: Tamaño de la página que se recupera
+          required: true
+      responses: 
+          200:
+            body: 
+              type: <<tipoEntidad>> []  
+    post:
+      description: Crear <<tipoEntidad>>
+      body: 
+        application/json:
+        type: <<tipoEntidad>>
+      responses:
+        201: 
+          body: 
+            type: <<tipoEntidad>>
+        404:
+          description: El recurso no ha sido encontrado
+          body: 
+            type: Mensaje
+/facturas:
+  type: {coleccion:{"tipoEntidad": "Factura"}}
+  put:
+    description: Actualizar factura
+    body: 
+    responses: 
+      200:
+        description: La operación se ha realizado con éxito
+        body: 
+          application/json:
+          type: Mensaje
+      404: 
+        description: El recurso no ha sido encontrado
+  /{facturaId}: 
+    get:
+      description: Recuperar factura por id
+      responses: 
+        200:
+          description: La operación se ha realizado con éxito
+          body: 
+            application/json:
+            type: Factura         
+        404:
+          description: El recurso no ha sido encontrado
+    delete:
+      description: Borrar factura por id
+      responses: 
+        200: 
+        404: 
+          description: El recurso no ha sido encontrado
+
+/albaranes:
+  type: {coleccion:{"tipoEntidad": "Albaran"}} 

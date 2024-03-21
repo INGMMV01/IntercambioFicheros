@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "184307f3-9bcf-44ba-a321-c2c86ac61833",
+		"name": "05 Tests con Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5387577"
+	},
+	"item": [
+		{
+			"name": "Get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Es un mail?\", ()=>{",
+							"    var expectedEmail = data.expectedEmail;",
+							"    pm.expect(pm.response.json().email).to.eql(expectedEmail);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/users/{{userId}}",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
