@@ -156,3 +156,14 @@ Si un sistema hace que otros dependan de él, un fallo en este, puede provocar u
 
 ## Capítulo 14: Vas a cambiar
 
+Nuestras expectativas e idea de futuro cambian según nuestra edad, circunstancias...
+Los planes que hacemos en un determinado momento de la vida no son adecuados para cualquier otro momento. En ocasiones, incluso cumpliendo los planes, no estamos contentos porque, cuando llegamos, somos personas distintas.
+Comprometerse demasiado con un plan puede ser frustante si estás demasiado ligado a él y puedes sentirte secuestrado. 
+Luchar por llegar a un punto y, darte cuenta una vez llegado, que no es lo que querías es especialmente frustrante, provoca remordimiento, te hace pensar en el tiempo perdido y que ahora deberías ir en dirección contraria al doble de velocidad.
+
+La ilusión del fin de la historia:
+Es un sesgo psicológico que te hace ser perfectamente consciente de lo que has cambiado en el pasado pero subestimar todo lo que vas a cambiar en el futuro.
+
+El equilibrio en los planes es una buena estrategia para evitar abandonarlos o sentirse insatisfecho con tu vida.
+
+## Capítulo 15: 
