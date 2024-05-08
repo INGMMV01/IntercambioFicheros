@@ -1,5 +1,5 @@
 # Archivo que incluye los jobs de todos los frontales de la solución
 
 include:
-   - local: frontend/ITEMCGDN/.gitlab-ci.yml
+   - local: frontend/RPOSAA0415/.gitlab-ci.yml
 

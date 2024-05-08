@@ -1,0 +1,66 @@
+# Definición de los jobs para generar el frontal RPOSAA0415
+
+.RPOSAA0415:default:
+  variables:
+    ITEM_CGDN: "RPOSAA0415" # Completar con el código CGDN del item que se construye
+    WORKSPACE_NAME: 'RPOSAA0415'  
+    LIBRARY_NAME: 'production' 
+    PACKAGE_UPLOAD: 'all' 
+
+RPOSAA0415:prepare-dependencies:
+  extends:
+    - .ng:prepare-dependencies
+    - .RPOSAA0415:default
+
+RPOSAA0415:build:
+  extends:
+    - .ng:build
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:prepare-dependencies
+
+RPOSAA0415:test:
+  extends:
+    - .ng:test
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:build
+
+RPOSAA0415:lint:
+  extends:
+    - .ng:lint
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:build
+
+RPOSAA0415:package:
+  extends:
+    - .ng:package
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:lint
+    - job: RPOSAA0415:test
+    - job: RPOSAA0415:build
+
+RPOSAA0415:metrics:
+  extends:
+    - .ng:metrics
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:package
+
+RPOSAA0415:publish:
+  extends:
+    - .ng:publish
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:metrics
+
+RPOSAA0415:deploy:
+  extends:
+    - .ng:deploy
+    - .RPOSAA0415:default
+  needs:
+    - job: RPOSAA0415:publish
+      artifacts: false
+
