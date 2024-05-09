@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    RPOSAA0415
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="referrer" content="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style id="antiClickjack">
+    body {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location.href = encodeURIComponent(self.location.href)
+    }
+</script>
+</head>
+
+<body>
+  <abanca-root></abanca-root>
+</body>
+
+</html>
