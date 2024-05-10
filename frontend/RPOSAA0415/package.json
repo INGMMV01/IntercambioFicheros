@@ -31,6 +31,7 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4",
     "@morphe/common": "^12.13.0",
+    "@morphe/material": "12.23.0-rc01",
     "@morphe/seguridad": "^12.5.0",
     "@morphe/api": "^12.8.0",
     "@angular/cdk": "^12.2.13",

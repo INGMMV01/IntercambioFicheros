@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{data.titulo}}</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{data.descripcion}}</h3>
+  <mat-expansion-panel (opened)="mostrarDetalles()" (closed)="mostrarDetalles()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{detallesVisibles ? 'Ocultar detalles' : 'Ver detalles'}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <pre [className]="claseDetalles">{{data.detalles}}</pre>
+  </mat-expansion-panel>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="copiarAlPortapapeles()">Copiar detalles</button>
+  <button mat-button (click)="aceptar()" cdkFocusInitial>Cerrar</button>
+</mat-dialog-actions>

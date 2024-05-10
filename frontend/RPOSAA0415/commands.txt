@@ -10,3 +10,6 @@ ng g @morphe/schematic-angular:module peticiones/peticion-propiedades/detalle --
 ng g @morphe/schematic-angular:module peticiones/peticion-propiedades/nuevo --route=nuevo -m=peticiones/peticion-propiedades --dry-run
 
 
+ng g @morphe/schematic-angular:component shared/cargando --skip-tests --dry-run
+ng g @morphe/schematic-angular:component shared/input-code-resolver --skip-tests --dry-run
+ng g @morphe/schematic-angular:component shared/validacion-snackbar --skip-tests --dry-run
