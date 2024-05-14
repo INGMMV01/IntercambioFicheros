@@ -50,6 +50,8 @@ export class ListaComponent implements OnInit, AfterViewInit {
                     return (item.attributes.valor || '').toLowerCase();
                 case 'fechaDeModificacion': {
                     const dateValue: Date | null = item.attributes[property];
+
+                    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                     return dateValue ? new Date(dateValue).getTime() : Number.MIN_SAFE_INTEGER;
                 }
                 default:
@@ -139,6 +141,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
 
     public get cargandoPropiedadesPeticion(): boolean {
         const cargando: boolean = this.propiedadesPeticionService.cargandoPropiedadPeticiones;
+
         return cargando;
     }
 
@@ -163,6 +166,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
     private comprobarCoincidencia(attribute1: string, attribute2?: string, filterValue?: string | null): boolean {
         if (filterValue !== undefined && filterValue !== null) {
             const combinedValue = (attribute1 ? attribute1 : '') + (attribute2 ? attribute2 : '');
+
             return combinedValue.toLowerCase().includes(filterValue.toString().toLowerCase());
         } else {
             return true;
