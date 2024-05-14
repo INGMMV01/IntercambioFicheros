@@ -5,6 +5,7 @@ import { PeticionPropiedadesRoutingModule } from './peticion-propiedades-routing
 import { PeticionPropiedadesComponent } from './peticion-propiedades.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { ListaComponent } from './lista/lista.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ListaComponent } from './lista/lista.component';
     ],
     imports: [
         CommonModule,
-        PeticionPropiedadesRoutingModule
+        PeticionPropiedadesRoutingModule,
+        SharedModule
     ]
 })
 export class PeticionPropiedadesModule { }

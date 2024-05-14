@@ -1,1 +1,58 @@
-<p>filtro works!</p>
+<form [formGroup]="formGroup" #filtroForm class="formularioFiltros">
+  <mat-accordion class="filtros-accordion" multi>
+    <mat-expansion-panel #myPanel="matExpansionPanel" (opened)="onPanelOpened()" (closed)="onPanelClosed()">
+      <mat-expansion-panel-header class="filtros-expansion-panel">
+        <mat-panel-description>
+          <div class="vista-previa-expansion-panel">
+            <ng-container *ngIf="filledFilters$ | async as filledFilters; else sinFiltros">
+              <div style="display: flex;" *ngIf="filledFilters.length > 0; else sinFiltros">
+                <h4 class="vista-previa-filtros" *ngFor="let filtro of filledFilters; trackBy: trackByFiltros">
+                  {{ filtro.text }}
+                </h4>
+              </div>
+            </ng-container>
+            <ng-template #sinFiltros>
+              <h3>Filtros: Ninguno</h3>
+            </ng-template>
+            <div class="estado-expansion-panel">{{panelOpenState ? 'Ocultar' : 'Mostrar'}} acciones</div>
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="expansion-panel-body">
+        <div class="contenedor-filtros">
+          <mat-form-field class="filtroClave">
+            <mat-label>Clave</mat-label>
+            <input matInput (keyup)="applyFilter()" formControlName="clave" #input>
+          </mat-form-field>
+          <mat-form-field class="filtroNombre">
+            <mat-label>Nombre</mat-label>
+            <input matInput (keyup)="applyFilter()" formControlName="nombre" #input>
+          </mat-form-field>
+          <mat-form-field class="filtroValor">
+            <mat-label>Valor</mat-label>
+            <input matInput (keyup)="applyFilter()" formControlName="valor" #input>
+          </mat-form-field>
+          <mat-form-field class="filtroFechaModificacion">
+            <mat-label>Fecha de modificación</mat-label>
+            <input matInput (keyup)="applyFilter()" formControlName="fechaDeModificacion" placeholder="Ej: 12/02/2024" #input>
+          </mat-form-field>
+        </div>
+        <div class="acciones">
+          <button moRaisedButton color="primary" [routerLink]="['/', 'propiedades-peticion', 'nueva']">
+            <mat-icon>add_circle_outline</mat-icon>
+            Nueva Propiedad</button>
+          <button moOutlinedButton color="primary" (click)="limpiarFiltros()">
+            <mat-icon moCDN="material/filter-remove"></mat-icon>
+            Limpiar filtros
+          </button>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip" *ngIf="filledFilters$ | async as filledFilters">
+          <mo-chip *ngFor="let filtro of filledFilters; trackBy: trackByFiltros" [icon]="'material/filter'"
+            [text]="filtro.text" (closed)="onCloseFilter(filtro.key)"></mo-chip>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</form>

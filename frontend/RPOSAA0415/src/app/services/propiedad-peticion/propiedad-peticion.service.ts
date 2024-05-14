@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { IJsonApiData } from '@morphe/common';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { IPropiedadPeticionResponseAttributes } from '../models/RPOS415/PropiedadPeticionResponseAttributes';
-import { GestionDeLaConfiguracionPropiedadPeticionService } from './RPOS415/GestionDeLaConfiguracionPropiedadPeticionService';
+import { IPropiedadPeticionResponseAttributes } from '../../models/RPOS415/PropiedadPeticionResponseAttributes';
+import { GestionDeLaConfiguracionPropiedadPeticionService } from '../RPOS415/GestionDeLaConfiguracionPropiedadPeticionService';
 
 @Injectable({
     providedIn: 'root'

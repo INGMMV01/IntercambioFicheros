@@ -1,0 +1,144 @@
+.expansion-panel-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Asegura que los filtros y las acciones se distribuyan a lo largo de la fila */
+}
+
+@media (min-width: 1280px) {
+  .expansion-panel-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.contenedor-filtros {
+  flex-grow: 1;
+  /* Permite que el contenedor de filtros ocupe la mayor parte del espacio */
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los filtros se ajusten según el tamaño disponible */
+}
+
+.acciones {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.acciones button {
+  white-space: nowrap;
+  /* Evita que el texto se divida en varias líneas */
+  min-width: fit-content;
+  /* Ajusta el ancho mínimo al contenido, asegurando espacio para todo el texto */
+}
+
+.chips {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Ocupa el ancho completo debajo de los filtros y acciones */
+  margin-top: 10px;
+  /* Espacio entre los filtros y chips */
+}
+
+.vista-previa-expansion-panel {
+  display: flex;
+  /* Cambia de inline-flex a flex para mejor control sobre los ejes */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* Espacia los elementos entre sí */
+  width: 100%;
+  /* Asegúrate de que ocupe todo el ancho disponible para permitir la separación */
+}
+
+.estado-expansion-panel {
+  display: flex;
+  justify-content: flex-end;
+  /* centrar contenido verticalmente */
+  align-items: center;
+  margin-top: 0.4em;
+}
+
+.filtros-accordion {
+  width: 100%;
+}
+
+.filtros-expansion-panel {
+  height: 2rem;
+  background-color: whitesmoke;
+}
+
+.vista-previa-filtros {
+  padding-left: 1rem;
+}
+
+.formularioFiltros {
+  display: flex;
+  flex-direction: column;
+  background-color: #5c88da;
+}
+
+.fila {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.mat-form-field {
+  margin-right: 1rem;
+  /* Espaciado entre campos de formulario */
+}
+
+/* Ajusta el ancho de los campos de filtro según su contenido y relevancia */
+.formularioFiltros .filtroNombre,
+.formularioFiltros .filtroClave,
+.formularioFiltros .filtroValor {
+  min-width: 10rem;
+  max-width: 17rem;
+}
+
+.formularioFiltros .filtroFechaModificacion {
+  max-width: 10rem;
+}
+
+.chip {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los chips se ajusten y formen nuevas líneas si es necesario */
+  gap: 0.5rem;
+  /* Espacio entre chips */
+}
+
+::ng-deep .chip .material-icons:first-child svg {
+  fill: #5c88da;
+  width: 20px;
+  height: 20px;
+  preserveAspectRatio: 'xMidYMid meet';
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+::ng-deep .chip .material-icons:last-child svg {
+  fill: #000000;
+}
+
+::ng-deep .mat-expansion-panel:last-of-type {
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.mat-accordion .mat-expansion-panel:first-of-type {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.mat-expansion-panel-header.mat-expanded:hover {
+  background-color: whitesmoke;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
