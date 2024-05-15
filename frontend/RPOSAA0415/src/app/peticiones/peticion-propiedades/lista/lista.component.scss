@@ -8,9 +8,18 @@
   background-color: white;
 }
 
+// Con barra de navegación
+// .tabla-scroll {
+//   display: block;
+//   height: calc(100vh - 4rem);
+//   /* 4rem de la barra de navegación */
+//   overflow: auto;
+//   margin: 1rem 0.5rem 0.5rem 0.5rem;
+// }
+
 .tabla-scroll {
   display: block;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3rem);
   /* 4rem de la barra de navegación */
   overflow: auto;
   margin: 1rem 0.5rem 0.5rem 0.5rem;

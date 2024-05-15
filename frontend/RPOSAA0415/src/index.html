@@ -16,13 +16,15 @@
     }
   </style>
   <script type="text/javascript">
-    if (self === top) {
-        var antiClickjack = document.getElementById("antiClickjack");
-        antiClickjack.parentNode.removeChild(antiClickjack);
+    var allowedDomains = ['http://localhost', 'http://localhost:4200', 'http://dcaplicaciones', 'http://tcaplicaciones', 'http://ecaplicaciones'];
+
+    if (self !== top || !allowedDomains.includes(document.referrer)) {
+      var antiClickjack = document.getElementById("antiClickjack");
+      antiClickjack.parentNode.removeChild(antiClickjack);
     } else {
-        top.location.href = encodeURIComponent(self.location.href)
+      top.location.href = encodeURIComponent(self.location.href)
     }
-</script>
+  </script>
 </head>
 
 <body>

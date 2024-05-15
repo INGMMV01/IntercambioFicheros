@@ -111,8 +111,10 @@ export class ListaComponent implements OnInit, AfterViewInit {
         this.layoutMedidasService.getFiltroForm$().subscribe((filtroFormHeight: number) => {
             this.cdRef.detectChanges();
             if (this.tablaScroll) {
-                this.tablaScroll.nativeElement.style.height = `calc(100vh - 4rem - ${filtroFormHeight}px - 3.7rem)`;
-
+                // Con barra de navegación
+                // this.tablaScroll.nativeElement.style.height = `calc(100vh - 4rem - ${filtroFormHeight}px - 3.7rem)`;
+                // Sin barra de navegación
+                this.tablaScroll.nativeElement.style.height = `calc(100vh - 3rem - ${filtroFormHeight}px - 3.7rem)`;
             }
 
         });
