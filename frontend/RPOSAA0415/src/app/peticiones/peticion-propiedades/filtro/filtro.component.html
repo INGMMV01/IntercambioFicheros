@@ -1,8 +1,16 @@
 <form [formGroup]="formGroup" #filtroForm class="formularioFiltros">
   <mat-accordion class="filtros-accordion" multi>
-    <mat-expansion-panel #myPanel="matExpansionPanel" (opened)="onPanelOpened()" (closed)="onPanelClosed()">
+    <mat-expansion-panel #myPanel="matExpansionPanel" (opened)="onPanelOpened()" (closed)="onPanelClosed()" hideToggle>
       <mat-expansion-panel-header class="filtros-expansion-panel">
         <mat-panel-description>
+          <button *ngIf="this.estadoBusquedaService.referrer" mat-fab color="primary" matTooltip="Volver" matTooltipClass="tooltip-boton-accion-vista-previa"
+            class="boton-accion-vista-previa navegacion" (click)="$event.stopPropagation();volverAtras()">
+            <mat-icon class="icono-fuente">arrow_back</mat-icon></button>
+          <button mat-fab color="primary" [matTooltip]="panelOpenState ? 'Ocultar filtros' : 'Mostrar filtros'"
+            matTooltipClass="tooltip-boton-accion-vista-previa" class="boton-accion-vista-previa navegacion"
+            (click)="$event.stopPropagation(); togglePanel()">
+            <mat-icon class="icono-fuente">{{ panelOpenState ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </button>
           <div class="vista-previa-expansion-panel">
             <ng-container *ngIf="filledFilters$ | async as filledFilters; else sinFiltros">
               <div style="display: flex;" *ngIf="filledFilters.length > 0; else sinFiltros">
@@ -12,10 +20,18 @@
               </div>
             </ng-container>
             <ng-template #sinFiltros>
-              <h3>Filtros: Ninguno</h3>
+              <h3 class="vista-previa-filtros">Filtros: Ninguno</h3>
             </ng-template>
-            <div class="estado-expansion-panel">{{panelOpenState ? 'Ocultar' : 'Mostrar'}} acciones</div>
           </div>
+          <button mat-fab color="primary" matTooltip="Limpiar filtros"
+            (click)="$event.stopPropagation();limpiarFiltros()" matTooltipClass="tooltip-boton-accion-vista-previa"
+            class="boton-accion-vista-previa">
+            <mat-icon svgIcon="filter-remove"></mat-icon>
+          </button>
+          <button mat-fab color="primary" matTooltip="Nueva propiedad" matTooltipClass="tooltip-boton-accion-vista-previa"
+            class="boton-accion-vista-previa" (click)="$event.stopPropagation();"
+            [routerLink]="['/', 'propiedades-peticion', 'nueva']">
+            <mat-icon class="icono-fuente">add</mat-icon></button>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="expansion-panel-body">
@@ -37,7 +53,7 @@
             <input matInput (keyup)="applyFilter()" formControlName="fechaDeModificacion" placeholder="Ej: 12/02/2024" #input>
           </mat-form-field>
         </div>
-        <div class="acciones">
+        <!-- <div class="acciones">
           <button moRaisedButton color="primary" [routerLink]="['/', 'propiedades-peticion', 'nueva']">
             <mat-icon>add_circle_outline</mat-icon>
             Nueva Propiedad</button>
@@ -45,7 +61,7 @@
             <mat-icon moCDN="material/filter-remove"></mat-icon>
             Limpiar filtros
           </button>
-        </div>
+        </div> -->
       </div>
       <div class="chips">
         <div class="chip" *ngIf="filledFilters$ | async as filledFilters">

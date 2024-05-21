@@ -36,7 +36,7 @@
       </ng-container>
 
       <ng-container matColumnDef="acciones" stickyEnd>
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <th mat-header-cell *matHeaderCellDef> </th>
         <td class="overflow-celda" mat-cell *matCellDef="let element">
           <mat-icon matSuffix [matMenuTriggerFor]="menu" [matMenuTriggerData]="{element: element}">
             more_vert
@@ -70,7 +70,6 @@
     </div>
   </ng-template>
 </div>
-
 <mat-card *ngIf="cargandoPropiedadesPeticion;">
   <mat-card-content>
     <abanca-cargando [valorLoading]="cargandoPropiedadesPeticion"></abanca-cargando>

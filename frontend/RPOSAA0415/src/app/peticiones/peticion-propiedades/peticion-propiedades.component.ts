@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./peticion-propiedades.component.scss']
 })
 export class PeticionPropiedadesComponent {
-
+    referring = false;
     constructor() { }
+
+    handleReferringChange(status: boolean) {
+        this.referring = status;
+    }
 }

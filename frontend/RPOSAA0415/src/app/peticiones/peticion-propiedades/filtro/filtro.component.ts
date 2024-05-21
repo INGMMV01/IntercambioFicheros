@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +9,8 @@ import { EstadoBusquedaPropiedadesPeticionService } from 'src/app/services/propi
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
 import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/filtro-propiedades-peticion.service';
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'abanca-filtro',
@@ -19,6 +21,7 @@ export class FiltroComponent implements AfterViewInit, OnInit {
 
     @ViewChild('filtroForm') filtroForm: ElementRef | undefined;
     @ViewChild('myPanel') myPanel: MatExpansionPanel | undefined;
+    @Output() referringChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     panelOpenState = false;
     formGroup: FormGroup;
@@ -31,7 +34,9 @@ export class FiltroComponent implements AfterViewInit, OnInit {
     constructor(private activatedRoute: ActivatedRoute,
         private formBuilder: FormBuilder,
         private propiedadPeticionService: PropiedadPeticionService,
-        private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
+        iconRegistry: MatIconRegistry,
+        sanitizer: DomSanitizer,
+        public estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         public filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService) {
         this.filtros = this.filtroService.getFiltros();
@@ -41,12 +46,23 @@ export class FiltroComponent implements AfterViewInit, OnInit {
             this.applyFilter();
         });
         this.panelOpenState = this.estadoBusquedaService.panelOpenState;
+        iconRegistry.addSvgIcon(
+            'filter-remove',
+            sanitizer.bypassSecurityTrustResourceUrl('https://cdn.abanca.io/assets/icons/material/filter-remove.svg')
+        );
     }
 
     @HostListener('window:resize', ['$event'])
     onResize(event: any) {
         this.updateTableScrollHeight();
     }
+
+    togglePanel() {
+        if (this.myPanel) {
+            this.myPanel.toggle();
+        }
+    }
+
     onPanelOpened(): void {
         this.panelOpenState = true;
         this.estadoBusquedaService.panelOpenState = this.panelOpenState;
@@ -64,6 +80,12 @@ export class FiltroComponent implements AfterViewInit, OnInit {
     }
 
     ngOnInit(): void {
+
+        // Leer el parámetro referrer que contiene la url de referencia.
+        this.activatedRoute.queryParams.subscribe(params => {
+            this.estadoBusquedaService.referrer = params['referrer'];
+        });
+
         setTimeout(() => {
             if (this.myPanel && this.panelOpenState) {
                 this.myPanel.open();
@@ -75,6 +97,13 @@ export class FiltroComponent implements AfterViewInit, OnInit {
         if (this.filtroForm) {
             const height = this.filtroForm.nativeElement.offsetHeight;
             this.layoutMedidasService.setFiltroForm(height);
+        }
+    }
+
+    public volverAtras() {
+        if (this.estadoBusquedaService.referrer) {
+            this.referringChange.emit(true);
+            window.location.href = this.estadoBusquedaService.referrer;
         }
     }
 

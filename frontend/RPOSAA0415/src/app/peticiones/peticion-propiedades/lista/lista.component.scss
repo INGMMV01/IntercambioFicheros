@@ -59,17 +59,13 @@
   text-overflow: ellipsis;
 }
 
-/* Ajustes para columnas de propiedades de petición */
-.mat-column-clave,
-.mat-column-nombre,
-.mat-column-valor,
-.mat-column-fechaDeModificacion {
+.mat-column-clave {
   padding-left: 2em;
 }
 
 .mat-column-valor {
-  min-width: 7em;
-  max-width: 8em;
+  min-width: 10em;
+    max-width: 12em;
 }
 
 .mat-column-nombre {
@@ -79,6 +75,10 @@
 
 .mat-column-fechaDeModificacion {
   width: 6em;
+}
+
+.mat-column-acciones {
+  width: 2em;
 }
 
 /* Ajustes generales para la visualización */

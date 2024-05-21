@@ -15,6 +15,7 @@ export class EstadoBusquedaPropiedadesPeticionService {
     pageSize: number;
     tabIndex: number;
     panelOpenState: boolean;
+    referrer: string;
 
     constructor() {
         this.clave = '';
@@ -27,5 +28,6 @@ export class EstadoBusquedaPropiedadesPeticionService {
         this.pageSize = 10;
         this.tabIndex = 0;
         this.panelOpenState = false;
+        this.referrer = '';
     }
 }
