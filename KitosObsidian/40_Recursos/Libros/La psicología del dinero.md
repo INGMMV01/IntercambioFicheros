@@ -166,4 +166,20 @@ Es un sesgo psicológico que te hace ser perfectamente consciente de lo que has 
 
 El equilibrio en los planes es una buena estrategia para evitar abandonarlos o sentirse insatisfecho con tu vida.
 
-## Capítulo 15: 
+## Capítulo 15: Todo tiene un precio
+
+Todo parece más fácil cuando es otro quien tiene que hacerlo.
+
+El éxito o la rentabilidad tiene el precio de saber soportar la volatilidad, el sacrificio, la paciencia... En muchas ocasiones el precio de estar invertido es estar mucho tiempo en pérdidas o bajo los mínimos.
+
+Si intentas eludir la volatilidad y hacer timing o movimientos tácticos (por ejemplo alternando RV y RF) es probable que pierdas más que quedándote quieto y soportando el temporal.
+
+Muy pocos fondos o inversores consiguen superar con movimientos tácticos los resultados de la paciencia y el apego a una estrategia a largo plazo.
+
+Las trampas, a la larga, pueden ser mucho más caras que hacerlo bien. Por ejemplo empresas que se endeudan para pagar dividendos. Apalancarse para invertir, hacer cortos...
+
+Pensar en la volatilidad del mercado como una tarifa en lugar de como una multa es una parte importante de desarrollar la mentalidad para soportarla y mantenerte fiel a tu estrategia.
+
+Descubre cuál es el precio y págalo.
+
+## Capítulo 16: 
