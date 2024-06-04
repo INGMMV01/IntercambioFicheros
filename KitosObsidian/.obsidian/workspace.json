@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_Inbox/lectura sobre ChatGPT.md",
+                "file": "40_Recursos/Libros/La psicología del dinero.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_Inbox/lectura sobre ChatGPT.md",
+                "file": "40_Recursos/Libros/La psicología del dinero.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_Inbox/lectura sobre ChatGPT.md",
+                "file": "40_Recursos/Libros/La psicología del dinero.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_Inbox/lectura sobre ChatGPT.md"
+                "file": "40_Recursos/Libros/La psicología del dinero.md"
               }
             }
           }
@@ -138,16 +138,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "canvas:Crear nuevo lienzo": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo canvas": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9942e9a3a39d0cf7",
+  "active": "77d2748029cd585b",
   "lastOpenFiles": [
+    "10_Inbox/lectura sobre ChatGPT.md",
     "40_Recursos/Formación/Curso TDD/Material Curso.md",
     "40_Recursos/Formación/Cursos.md",
     "10_Inbox/readme.md",
@@ -178,7 +179,6 @@
     "30_Areas/30_Ocio_Cultura/Descargas.md",
     "30_Areas/30_Ocio_Cultura/Libros/Repositorio libros.md",
     "30_Areas/30_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
-    "10_Inbox/lectura sobre ChatGPT.md",
     "30_Areas/30_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/30_Ocio_Cultura/Cine/Películas.md",
     "30_Areas/30_Ocio_Cultura/Cine/Series.md",
