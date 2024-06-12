@@ -94,3 +94,14 @@ tipos
   - establece idioma por defecto
   - función de cambio de idioma
 - pipe translate
+
+## Proyecto 6: PIPEs
+- Referencia: https://v13.angular.io/api?type=pipe
+- locale
+  - npm i @angular/localize
+  - angular.jason=> "i18n": {"sourceLocale": "es"},
+
+## Proyecto 7: Formularios reactivos
+- importa FormsModules y ReactiveFormsModule
+- genera una variable de tipo FormGroup con tantas propiedades como quieras enlazar
+- genera un formulario en HTML con varios campos y enlaza el formulario con la variable del codebehing y cada control con una propiedad del mismo
