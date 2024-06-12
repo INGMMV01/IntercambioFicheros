@@ -8,7 +8,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { IJsonApiData } from '@morphe/common';
 import { IFiltros } from 'src/app/models/propiedad-peticion/Filtros';
+import { IPropiedadPeticionResponse } from 'src/app/models/RPOS415/PropiedadPeticionResponse';
 import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
+import { EstadosPeticionService } from 'src/app/services/estados/estados-peticion.service';
+import { GenericDataService } from 'src/app/services/generic-data.service';
 import { EstadoBusquedaPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/estado-busqueda-propiedades-peticion.service';
 import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/filtro-propiedades-peticion.service';
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
@@ -26,7 +29,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
 
     dataSource: MatTableDataSource<IJsonApiData<IPropiedadPeticionResponseAttributes>> = new MatTableDataSource();
     columnasVisibles: Array<string> = [
-        'clave',
+        // 'clave',
         'nombre',
         'valor',
         'fechaDeModificacion',
@@ -74,7 +77,8 @@ export class ListaComponent implements OnInit, AfterViewInit {
         private paginator: MatPaginatorIntl,
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
-        private propiedadesPeticionService: PropiedadPeticionService,
+        private propiedadPeticionService: PropiedadPeticionService,
+        private estadosPeticionService: EstadosPeticionService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,
@@ -100,9 +104,14 @@ export class ListaComponent implements OnInit, AfterViewInit {
         this.filtroService.getFiltros$().subscribe((filtros: IFiltros) => {
             this.filtros = filtros;
             this.dataSource.filter = JSON.stringify(filtros);
+
+            this.estadosPeticionService.get$('DLL').subscribe(respuesta => {
+                this.estadosPeticionService.setData(respuesta);
+            });
+
         });
 
-        this.propiedadesPeticionService.getData$().subscribe(data => {
+        this.propiedadPeticionService.getData$().subscribe(data => {
             this.dataSource.data = data;
         });
     }
@@ -142,7 +151,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
     }
 
     public get cargandoPropiedadesPeticion(): boolean {
-        const cargando: boolean = this.propiedadesPeticionService.cargandoPropiedadPeticiones;
+        const cargando: boolean = this.propiedadPeticionService.cargando;
 
         return cargando;
     }

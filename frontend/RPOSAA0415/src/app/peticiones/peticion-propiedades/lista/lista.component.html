@@ -4,12 +4,6 @@
     <table mat-table #tabla [dataSource]="dataSource" matSort (matSortChange)="sortChange($event)"
       [matSortActive]="sortActive" [matSortDirection]="sortDirection" class="tabla-listado">
 
-      <!-- Clave de la Propiedad de Petición -->
-      <ng-container matColumnDef="clave">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Clave </th>
-        <td mat-cell *matCellDef="let element"> {{ element.attributes.clave }} </td>
-      </ng-container>
-
       <!-- Nombre de la Propiedad de Petición -->
       <ng-container matColumnDef="nombre">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>

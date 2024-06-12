@@ -11,6 +11,12 @@ import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-pet
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { IPropiedadPeticionResponse } from 'src/app/models/RPOS415/PropiedadPeticionResponse';
+import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
+import { IPropiedadPeticionPutRequestAttributes } from 'src/app/models/RPOS415/PropiedadPeticionPutRequestAttributes';
+import { mapResponseToPutRequest } from 'src/app/models/mappers/propiedad-peticion-mappers';
+import { GenericDataService } from 'src/app/services/generic-data.service';
+import { IPropiedadPeticionPostRequestAttributes } from 'src/app/models/RPOS415/PropiedadPeticionPostRequestAttributes';
 
 @Component({
     selector: 'abanca-filtro',
@@ -28,7 +34,7 @@ export class FiltroComponent implements AfterViewInit, OnInit {
     filtros: IFiltros;
     filledFilters: { key: keyof IFiltros; text: string }[] = [];
     filledFilters$: BehaviorSubject<{ key: keyof IFiltros; text: string }[]> =
-    new BehaviorSubject<{ key: keyof IFiltros; text: string }[]>([]);
+        new BehaviorSubject<{ key: keyof IFiltros; text: string }[]>([]);
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
 
     constructor(private activatedRoute: ActivatedRoute,
@@ -41,10 +47,27 @@ export class FiltroComponent implements AfterViewInit, OnInit {
         private layoutMedidasService: LayoutMedidasService) {
         this.filtros = this.filtroService.getFiltros();
         this.formGroup = this.agregarControlesFiltro();
-        this.propiedadPeticionService.obtenerPropiedadPeticiones$(this.idPeticion).subscribe(respuesta => {
-            this.propiedadPeticionService.setData(respuesta);
+
+        this.propiedadPeticionService.get$(this.idPeticion).subscribe(respuesta => {
+
+            // Test
+            const objetoAActualizar = respuesta.find(item => item.attributes.clave === 'Rutas Pendientes');
+            if (objetoAActualizar) {
+                let putRequestAttributes = mapResponseToPutRequest(objetoAActualizar.attributes, this.idPeticion);
+                putRequestAttributes.valor = 'Ruta modificada';
+                this.propiedadPeticionService.update$(this.idPeticion, objetoAActualizar.id, putRequestAttributes).subscribe(
+                    response => {
+                        console.log('Entity updated:', response);
+                    },
+                    error => {
+                        console.error('Error:', error);
+                    }
+                );
+            }
+
             this.applyFilter();
         });
+
         this.panelOpenState = this.estadoBusquedaService.panelOpenState;
         iconRegistry.addSvgIcon(
             'filter-remove',
