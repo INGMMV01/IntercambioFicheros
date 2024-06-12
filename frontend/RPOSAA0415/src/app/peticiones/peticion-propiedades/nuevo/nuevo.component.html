@@ -1,1 +1,44 @@
+<form [formGroup]="formulario" class="formulario">
+  <div class="cabecera-contenido">
+    <h2>Alta de propiedad para la petición {{idPeticion}}</h2>
 
+    <div class="botones">
+      <button [routerLink]="['/', 'peticiones', idPeticion, 'propiedades']" mat-raised-button color="accent">
+        <div class="icono-boton">
+          <mat-icon>arrow_back</mat-icon> Volver
+        </div>
+      </button>
+      <button [disabled]="formulario.invalid" style="margin-left: 0.5em" mat-raised-button color="primary"
+        (click)="guardar()">
+        <div class="icono-boton">
+          <mat-icon>save</mat-icon>&nbsp;Guardar
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <mat-form-field class="formularioClave">
+    <mat-label>Clave</mat-label>
+    <input #nombre matInput formControlName="clave" placeholder="Clave">
+  </mat-form-field>
+
+  <mat-form-field class="formularioNombre">
+    <mat-label>Nombre</mat-label>
+    <input #nombre matInput formControlName="nombre" placeholder="Nombre">
+  </mat-form-field>
+
+  <mat-form-field class="formularioValor">
+    <mat-label>Valor</mat-label>
+    <input #nombre matInput formControlName="valor" placeholder="Valor">
+  </mat-form-field>
+
+  <div class="error-summary">
+    <div *ngIf="formulario.invalid && formulario.get('clave')?.touched && formulario.get('clave')?.errors?.required"
+      class="error-message">El campo clave es obligatorio.</div>
+    <div *ngIf="formulario.invalid && formulario.get('nombre')?.touched && formulario.get('nombre')?.errors?.required"
+      class="error-message">El campo nombre es obligatorio.</div>
+    <div *ngIf="formulario.invalid && formulario.get('valor')?.touched && formulario.get('valor')?.errors?.required"
+      class="error-message">El campo valor es obligatorio.</div>
+  </div>
+
+</form>

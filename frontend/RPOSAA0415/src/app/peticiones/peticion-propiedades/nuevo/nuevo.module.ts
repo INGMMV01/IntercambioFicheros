@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NuevoRoutingModule } from './nuevo-routing.module';
 import { NuevoComponent } from './nuevo.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { NuevoComponent } from './nuevo.component';
     ],
     imports: [
         CommonModule,
-        NuevoRoutingModule
+        NuevoRoutingModule,
+        SharedModule
     ]
 })
 export class NuevoModule { }

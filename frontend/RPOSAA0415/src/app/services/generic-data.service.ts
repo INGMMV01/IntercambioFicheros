@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Observable, BehaviorSubject, throwError } from 'rxjs';
 import { IJsonApiData } from '@morphe/common';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { map, tap, catchError } from 'rxjs/operators';
 import { GenericService } from './generic.service';
-import { map, tap } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class GenericDataService<ResponseAttributes, PostRequestAttributes, PutRequestAttributes> {
+@Injectable()
+export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
 
-    private data$: BehaviorSubject<IJsonApiData<ResponseAttributes>[]> =
-        new BehaviorSubject<IJsonApiData<ResponseAttributes>[]>([]);
+    private data$: BehaviorSubject<IJsonApiData<ResponseType>[]> =
+    new BehaviorSubject<IJsonApiData<ResponseType>[]>([]);
+
+    private _cargando: boolean;
+
+    constructor(private genericService: GenericService<ResponseType, PostRequestType, PutRequestType>) {
+        this._cargando = false;
+    }
 
     public get cargando(): boolean {
         return this._cargando;
@@ -20,19 +24,24 @@ export class GenericDataService<ResponseAttributes, PostRequestAttributes, PutRe
         this._cargando = value;
     }
 
-    private _cargando: boolean;
+    getEntity$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
+    Observable<ResponseType> {
+        const urlSegments = this.parseUrlTemplate(template, params);
 
-    constructor(private genericService: GenericService<ResponseAttributes, any, any>) {
-        this._cargando = false;
+        return this.genericService.getEntity(urlSegments, cgdnCode, baseSegment).pipe(
+            catchError(error => {
+                console.error('Error fetching entity:', error);
+
+                return throwError(`An error occurred: ${error.message}`);
+            })
+        );
     }
 
-    get$(urlSegments: string[], queryParams?: Record<string, any>):
-        Observable<IJsonApiData<ResponseAttributes>[]> {
-        this.cargando = true;
+    get$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, queryParams?: Record<string, any>):
+    Observable<IJsonApiData<ResponseType>[]> {
+        const urlSegments = this.parseUrlTemplate(template, params);
 
-        const source$ = this.genericService.getEntities(urlSegments, queryParams);
-
-        return source$.pipe(
+        return this.genericService.getEntities(urlSegments, cgdnCode, baseSegment, queryParams).pipe(
             tap({
                 next: (data) => {
                     this.setData(data);
@@ -41,14 +50,20 @@ export class GenericDataService<ResponseAttributes, PostRequestAttributes, PutRe
                 error: () => {
                     this.cargando = false;
                 }
+            }),
+            catchError(error => {
+                console.error('Error fetching entities:', error);
+
+                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
 
-    add$(urlSegments: string[], entity: PostRequestAttributes): Observable<IJsonApiData<ResponseAttributes>> {
-        this.cargando = true;
-        const source$ = this.genericService.addEntity(urlSegments, entity);
-        return source$.pipe(
+    add$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PostRequestType):
+    Observable<IJsonApiData<ResponseType>> {
+        const urlSegments = this.parseUrlTemplate(template, params);
+
+        return this.genericService.addEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
                 next: (data) => {
                     this.appendData(data);
@@ -57,14 +72,20 @@ export class GenericDataService<ResponseAttributes, PostRequestAttributes, PutRe
                 error: () => {
                     this.cargando = false;
                 }
+            }),
+            catchError(error => {
+                console.error('Error adding entity:', error);
+
+                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
 
-    update$(urlSegments: string[], entity: PutRequestAttributes): Observable<IJsonApiData<ResponseAttributes>> {
-        this.cargando = true;
-        const source$ = this.genericService.updateEntity(urlSegments, entity);
-        return source$.pipe(
+    update$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PutRequestType):
+    Observable<IJsonApiData<ResponseType>> {
+        const urlSegments = this.parseUrlTemplate(template, params);
+
+        return this.genericService.updateEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
                 next: (data) => {
                     this.updateData(data);
@@ -73,29 +94,74 @@ export class GenericDataService<ResponseAttributes, PostRequestAttributes, PutRe
                 error: () => {
                     this.cargando = false;
                 }
+            }),
+            catchError(error => {
+                console.error('Error updating entity:', error);
+
+                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
 
-    getData$(): Observable<IJsonApiData<ResponseAttributes>[]> {
+    delete$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
+    Observable<IJsonApiData<ResponseType>> {
+        const urlSegments = this.parseUrlTemplate(template, params);
+
+        return this.genericService.deleteEntity(urlSegments, cgdnCode, baseSegment).pipe(
+            tap({
+                next: (data) => {
+                    this.removeData(data);
+                    this.cargando = false;
+                },
+                error: () => {
+                    this.cargando = false;
+                }
+            }),
+            catchError(error => {
+                console.error('Error deleting entity:', error);
+
+                return throwError(`An error occurred: ${error.message}`);
+            })
+        );
+    }
+
+    getData$(): Observable<IJsonApiData<ResponseType>[]> {
         return this.data$.asObservable().pipe(map((data) => [...data]));
     }
 
-    private setData(data: IJsonApiData<ResponseAttributes>[]): void {
+    private setData(data: IJsonApiData<ResponseType>[]): void {
         this.data$.next([...data]);
     }
 
-    private appendData(data: IJsonApiData<ResponseAttributes>): void {
+    private appendData(data: IJsonApiData<ResponseType>): void {
         const currentData = this.data$.getValue();
         this.data$.next([...currentData, data]);
     }
 
-    private updateData(data: IJsonApiData<ResponseAttributes>): void {
+    private updateData(data: IJsonApiData<ResponseType>): void {
         const currentData = this.data$.getValue();
         const index = currentData.findIndex(item => item.id === data.id);
         if (index !== -1) {
             currentData[index] = data;
             this.data$.next([...currentData]);
         }
+    }
+
+    private removeData(data: IJsonApiData<ResponseType>): void {
+        const currentData = this.data$.getValue();
+        this.data$.next(currentData.filter(item => item.id !== data.id));
+    }
+
+    private parseUrlTemplate(template: string, params: Record<string, any>): string[] {
+        return template.split('/').map(segment => {
+            const match = segment.match(/{(\w+)}/);
+            if (match) {
+                const key = match[1];
+
+                return params[key] || segment;
+            }
+
+            return segment;
+        });
     }
 }

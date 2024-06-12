@@ -4,8 +4,9 @@ import { PeticionPropiedadesComponent } from './peticion-propiedades.component';
 
 const routes: Routes = [
     { path: '', component: PeticionPropiedadesComponent },
-    { path: ':idPropiedad', loadChildren: () => import('./detalle/detalle.module').then(m => m.DetalleModule) },
-    { path: 'nuevo', loadChildren: () => import('./nuevo/nuevo.module').then(m => m.NuevoModule) }];
+    { path: 'nuevo', loadChildren: () => import('./nuevo/nuevo.module').then(m => m.NuevoModule) },
+    { path: ':idPropiedad', loadChildren: () => import('./detalle/detalle.module').then(m => m.DetalleModule) }
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

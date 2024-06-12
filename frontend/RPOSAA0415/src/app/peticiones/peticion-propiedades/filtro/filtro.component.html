@@ -30,7 +30,7 @@
           </button>
           <button mat-fab color="primary" matTooltip="Nueva propiedad" matTooltipClass="tooltip-boton-accion-vista-previa"
             class="boton-accion-vista-previa" (click)="$event.stopPropagation();"
-            [routerLink]="['/', 'propiedades-peticion', 'nueva']">
+            [routerLink]="['/', 'peticiones', idPeticion, 'propiedades', 'nuevo']">
             <mat-icon class="icono-fuente">add</mat-icon></button>
         </mat-panel-description>
       </mat-expansion-panel-header>

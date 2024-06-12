@@ -8,10 +8,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { IJsonApiData } from '@morphe/common';
 import { IFiltros } from 'src/app/models/propiedad-peticion/Filtros';
-import { IPropiedadPeticionResponse } from 'src/app/models/RPOS415/PropiedadPeticionResponse';
 import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
-import { EstadosPeticionService } from 'src/app/services/estados/estados-peticion.service';
-import { GenericDataService } from 'src/app/services/generic-data.service';
+import { EstadoPosibleService } from 'src/app/services/estados/estado-posible.service';
 import { EstadoBusquedaPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/estado-busqueda-propiedades-peticion.service';
 import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/filtro-propiedades-peticion.service';
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
@@ -78,7 +76,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
         private propiedadPeticionService: PropiedadPeticionService,
-        private estadosPeticionService: EstadosPeticionService,
+        private estadoPosibleService: EstadoPosibleService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,
@@ -105,8 +103,8 @@ export class ListaComponent implements OnInit, AfterViewInit {
             this.filtros = filtros;
             this.dataSource.filter = JSON.stringify(filtros);
 
-            this.estadosPeticionService.get$('DLL').subscribe(respuesta => {
-                this.estadosPeticionService.setData(respuesta);
+            this.estadoPosibleService.get$('DLL').subscribe(respuesta => {
+                console.log('Estado posible:', respuesta);
             });
 
         });
