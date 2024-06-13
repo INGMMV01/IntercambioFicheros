@@ -11,7 +11,6 @@ import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-pet
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { mapResponseToPutRequest } from 'src/app/models/mappers/propiedad-peticion-mappers';
 
 @Component({
     selector: 'abanca-filtro',
@@ -43,23 +42,7 @@ export class FiltroComponent implements AfterViewInit, OnInit {
         this.filtros = this.filtroService.getFiltros();
         this.formGroup = this.agregarControlesFiltro();
 
-        this.propiedadPeticionService.get$(this.idPeticion).subscribe(respuesta => {
-
-            // Test
-            const objetoAActualizar = respuesta.find(item => item.attributes.clave === 'Rutas Pendientes');
-            if (objetoAActualizar) {
-                const putRequestAttributes = mapResponseToPutRequest(objetoAActualizar.attributes, this.idPeticion);
-                putRequestAttributes.valor = 'Ruta modificada';
-                this.propiedadPeticionService.update$(this.idPeticion, objetoAActualizar.id, putRequestAttributes).subscribe(
-                    response => {
-                        console.log('Entity updated:', response);
-                    },
-                    error => {
-                        console.error('Error:', error);
-                    }
-                );
-            }
-
+        this.propiedadPeticionService.get$(this.idPeticion).subscribe(() => {
             this.applyFilter();
         });
 
@@ -71,11 +54,11 @@ export class FiltroComponent implements AfterViewInit, OnInit {
     }
 
     @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
+    onResize(event: any): void {
         this.updateTableScrollHeight();
     }
 
-    togglePanel() {
+    togglePanel(): void {
         if (this.myPanel) {
             this.myPanel.toggle();
         }
@@ -93,7 +76,7 @@ export class FiltroComponent implements AfterViewInit, OnInit {
         setTimeout(() => this.updateTableScrollHeight(), 300);
     }
 
-    ngAfterViewInit() {
+    ngAfterViewInit(): void {
         this.updateTableScrollHeight();
     }
 
@@ -101,7 +84,9 @@ export class FiltroComponent implements AfterViewInit, OnInit {
 
         // Leer el parámetro referrer que contiene la url de referencia.
         this.activatedRoute.queryParams.subscribe(params => {
-            this.estadoBusquedaService.referrer = params['referrer'];
+            if (params['referrer']) {
+                this.estadoBusquedaService.referrer = params['referrer'];
+            }
         });
 
         setTimeout(() => {
@@ -118,7 +103,7 @@ export class FiltroComponent implements AfterViewInit, OnInit {
         }
     }
 
-    public volverAtras() {
+    public volverAtras(): void {
         if (this.estadoBusquedaService.referrer) {
             this.referringChange.emit(true);
             window.location.href = this.estadoBusquedaService.referrer;
