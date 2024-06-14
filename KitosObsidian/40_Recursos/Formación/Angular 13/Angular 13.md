@@ -1,6 +1,7 @@
 
 Documentación github:
 https://github.com/IconoTC/-Angular-13-AF-46970---GR-65993
+https://github.com/INGMMV01/Curso-Angular-13 (documentación y proyectos)
 
 ## Typescript
 ### qué es: 
@@ -105,3 +106,7 @@ tipos
 - importa FormsModules y ReactiveFormsModule
 - genera una variable de tipo FormGroup con tantas propiedades como quieras enlazar
 - genera un formulario en HTML con varios campos y enlaza el formulario con la variable del codebehing y cada control con una propiedad del mismo
+
+## Proyecto 8: Angular material
+- ng add en lugar de npm install porque es parte de material
+- 
