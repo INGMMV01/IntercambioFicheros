@@ -109,4 +109,20 @@ tipos
 
 ## Proyecto 8: Angular material
 - ng add en lugar de npm install porque es parte de material
+- página de Material para ver componentes
+- Importar el módulo de cada componente
+- Usar los ejemplos de la página de documentación para incluirlos en nuestro código
+
+## Proyecto 9: Firebase
+- https://console.firebase.google.com/?pli=1
+- herramienta cloud para despliegue de aplicaciones, BD, login...
+- npm install o incluir dependencias en packages.json
+  - "@angular/fire": "^6.1.4",     "firebase": "^8.3.2"
+- Firebase web: Crea y registra proyecto
+- copia fireBaseConfig al fichero enviroment.ts
+- configura app.module.ts importando enviroments y firebase en import, imports y providers
+- uso en servicio
+  - servicio angularFirestore
+
+- Despliegue
 - 
