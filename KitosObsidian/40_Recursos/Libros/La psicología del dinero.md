@@ -182,11 +182,13 @@ Pensar en la volatilidad del mercado como una tarifa en lugar de como una multa 
 
 Descubre cuál es el precio y págalo.
 
-## Capítulo 16: 
-Tú eres tú y yo soy yo
+## Capítulo 16: Tú eres tú y yo soy yo
+
+Guárdate de seguir la estrategia de alguien que sigue un juego distinto del tuyo.
 
 Cada uno de nosotros tiene que saber cuál es su juego. Las verdades que aplican a unos no tienen por qué serlo para otros y, como se dice en el primer episodio, nadie está loco.
-Las estrategias y los horizontes personales de distintas personas hacen que vean las cosas con distintas perspectivas. Así, un inversor a largo plazo mirará más el precio de una acción (value) y si su valoración, negocio, previsión de ingresos... tiene sentido a largo plazo. Por otro ladoun espculador solo mirará los datos técnicos.
+Las estrategias y los horizontes personales de distintas personas hacen que vean las cosas con distintas perspectivas. Así, un inversor a largo plazo mirará más el precio de una acción (value) y si su valoración, negocio, previsión de ingresos... tiene sentido a largo plazo. Por otro lado un especulador solo mirará los datos técnicos.
+En gran parte la avaricia explica por qué la gente copia ideas que no son buenas para ellos.
 
 Esto justifica por qué existen las burbujas: mientras algunos pueden ver algo muy caro y que su precio no es sostenible con sus fundamentales otros verá el precio de hoy, el volumen de negociación, la inercia del precio...
 
@@ -195,3 +197,4 @@ Por ese motivo las recomendaciones generales no son adecuadas. No sabes cuál es
 Lo más importante es establecer un juego propio e intentar respetarlo. Para ello se recomienda algún tipo de declaración de intenciones, por ejemplo: 
 "Soy un inversor pasivo y optimista a largo plazo porque creo que el mundo está en continua mejora y crecimiento. El ruido del mercado y los vaivenes momentáneos no deberían afectarme"
 
+## Capítulo 17: 
