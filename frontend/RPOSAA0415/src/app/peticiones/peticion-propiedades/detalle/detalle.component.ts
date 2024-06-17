@@ -33,6 +33,11 @@ export class DetalleComponent {
             this.formulario.get('valor')?.setValue(propiedad.valor);
         });
     }
+    public get cargando(): boolean {
+        const cargando: boolean = this.propiedadPeticionService.cargando;
+
+        return cargando;
+    }
 
     guardar(): void {
 

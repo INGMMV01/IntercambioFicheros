@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" class="formulario">
+<form [formGroup]="formulario" class="formulario" *ngIf="!cargando">
   <div class="cabecera-contenido">
     <h2>Nueva propiedad de petición '{{idPeticion}}'</h2>
 
@@ -42,3 +42,8 @@
   </div>
 
 </form>
+<mat-card>
+  <mat-card-content>
+    <abanca-cargando [valorLoading]="cargando"></abanca-cargando>
+  </mat-card-content>
+</mat-card>

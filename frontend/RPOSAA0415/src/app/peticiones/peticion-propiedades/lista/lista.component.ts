@@ -76,7 +76,6 @@ export class ListaComponent implements OnInit, AfterViewInit {
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
         private propiedadPeticionService: PropiedadPeticionService,
-        private estadoPosibleService: EstadoPosibleService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,
@@ -102,10 +101,6 @@ export class ListaComponent implements OnInit, AfterViewInit {
         this.filtroService.getFiltros$().subscribe((filtros: IFiltros) => {
             this.filtros = filtros;
             this.dataSource.filter = JSON.stringify(filtros);
-
-            this.estadoPosibleService.get$('DLL').subscribe(respuesta => {
-                console.log('Estado posible:', respuesta);
-            });
 
         });
 

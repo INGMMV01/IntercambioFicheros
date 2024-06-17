@@ -27,6 +27,12 @@ export class NuevoComponent {
         });
     }
 
+    public get cargando(): boolean {
+        const cargando: boolean = this.propiedadPeticionService.cargando;
+
+        return cargando;
+    }
+
     guardar(): void {
 
         this.formulario.updateValueAndValidity();

@@ -26,13 +26,17 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
 
     getEntity$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
     Observable<ResponseType> {
+        this.cargando = true;
         const urlSegments = this.parseUrlTemplate(template, params);
 
         return this.genericService.getEntity(urlSegments, cgdnCode, baseSegment).pipe(
-            catchError(error => {
-                console.error('Error fetching entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
+            tap({
+                next: () => {
+                    this.cargando = false;
+                },
+                error: () => {
+                    this.cargando = false;
+                }
             })
         );
     }
@@ -40,6 +44,7 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     get$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, queryParams?: Record<string, any>):
     Observable<IJsonApiData<ResponseType>[]> {
         const urlSegments = this.parseUrlTemplate(template, params);
+        this.cargando = true;
 
         return this.genericService.getEntities(urlSegments, cgdnCode, baseSegment, queryParams).pipe(
             tap({
@@ -50,11 +55,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
                 error: () => {
                     this.cargando = false;
                 }
-            }),
-            catchError(error => {
-                console.error('Error fetching entities:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
@@ -62,6 +62,7 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     add$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PostRequestType):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
+        this.cargando = true;
 
         return this.genericService.addEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
@@ -72,11 +73,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
                 error: () => {
                     this.cargando = false;
                 }
-            }),
-            catchError(error => {
-                console.error('Error adding entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
@@ -84,6 +80,7 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     update$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PutRequestType):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
+        this.cargando = true;
 
         return this.genericService.updateEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
@@ -94,11 +91,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
                 error: () => {
                     this.cargando = false;
                 }
-            }),
-            catchError(error => {
-                console.error('Error updating entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
@@ -106,6 +98,7 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     delete$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
+        this.cargando = true;
 
         return this.genericService.deleteEntity(urlSegments, cgdnCode, baseSegment).pipe(
             tap({
@@ -116,11 +109,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
                 error: () => {
                     this.cargando = false;
                 }
-            }),
-            catchError(error => {
-                console.error('Error deleting entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
             })
         );
     }
