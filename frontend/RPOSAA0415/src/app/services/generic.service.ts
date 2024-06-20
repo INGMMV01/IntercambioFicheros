@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BasicHttpClientService } from '@morphe/api';
 import { IJsonApiCollection, IJsonApiData, IJsonApiObject, JsonApiHelper } from '@morphe/common';
-import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { BaseService } from './BaseService';
 
 @Injectable({
@@ -20,12 +20,7 @@ export class GenericService<ResponseAttributes, PostRequestAttributes, PutReques
         const url = this.buildUrl(urlSegments, baseSegment);
 
         return this.http.apiGet<IJsonApiObject<ResponseAttributes>>(cgdnCode, url, { params: queryParams }).pipe(
-            map(respuesta => this.mapResponseAttributes(respuesta.body)),
-            catchError(error => {
-                console.error('Error fetching entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
-            })
+            map(respuesta => this.mapResponseAttributes(respuesta.body))
         );
     }
 
@@ -35,12 +30,7 @@ export class GenericService<ResponseAttributes, PostRequestAttributes, PutReques
 
         return this.http.apiGet<IJsonApiCollection<ResponseAttributes>>(cgdnCode, url, { params: queryParams })
             .pipe(
-                map(respuesta => this.mapResponseDataCollection<ResponseAttributes>(respuesta.body)),
-                catchError(error => {
-                    console.error('Error fetching entities:', error);
-
-                    return throwError(`An error occurred: ${error.message}`);
-                })
+                map(respuesta => this.mapResponseDataCollection<ResponseAttributes>(respuesta.body))
             );
     }
 
@@ -52,12 +42,7 @@ export class GenericService<ResponseAttributes, PostRequestAttributes, PutReques
         data.attributes = entity;
 
         return this.http.apiPost<IJsonApiObject<any>>(cgdnCode, url, { data }).pipe(
-            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body)),
-            catchError(error => {
-                console.error('Error adding entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
-            })
+            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body))
         );
     }
 
@@ -69,12 +54,7 @@ export class GenericService<ResponseAttributes, PostRequestAttributes, PutReques
         data.attributes = entity;
 
         return this.http.apiPut<IJsonApiObject<any>>(cgdnCode, url, { data }).pipe(
-            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body)),
-            catchError(error => {
-                console.error('Error updating entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
-            })
+            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body))
         );
     }
 
@@ -84,12 +64,7 @@ export class GenericService<ResponseAttributes, PostRequestAttributes, PutReques
         const url = this.buildUrl(urlSegments, baseSegment);
 
         return this.http.apiDelete<any>(cgdnCode, url).pipe(
-            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body)),
-            catchError(error => {
-                console.error('Error deleting entity:', error);
-
-                return throwError(`An error occurred: ${error.message}`);
-            })
+            map(respuesta => this.mapResponseData<ResponseAttributes>(respuesta.body))
         );
     }
 

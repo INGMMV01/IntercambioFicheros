@@ -14,12 +14,12 @@ const cgdnCode = 'RPOS415';
 const baseTemplate = 'gestionDeLaConfiguracion';
 
 // Cambia estas plantillas según las URLs que utilice tu nuevo servicio
-const urlGetAllTemplate = 'tiposItem/{tipoItemId}/estadosPosiblesDeUnaPeticion';
+const urlGetAllTemplate = 'estados';
 
 @Injectable({
     providedIn: 'root'
 })
-export class EstadoPosibleService {
+export class EstadoService {
 
     private genericDataService: GenericDataService<ResponseType, never, never>;
 
@@ -28,10 +28,10 @@ export class EstadoPosibleService {
     }
 
     // Método para obtener todas las entidades
-    get$(tipoItemId: string, queryParams?: Record<string, any>):
+    get$(queryParams?: Record<string, any>):
     Observable<IJsonApiData<ResponseType>[]> {
 
-        const params = { tipoItemId }; // Cambia los parámetros si es necesario
+        const params = { }; // Cambia los parámetros si es necesario
 
         return this.genericDataService.get$(urlGetAllTemplate, params, cgdnCode, baseTemplate, queryParams);
     }

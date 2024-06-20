@@ -33,9 +33,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
             tap({
                 next: () => {
                     this.cargando = false;
-                },
-                error: () => {
-                    this.cargando = false;
                 }
             })
         );
@@ -46,14 +43,15 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
         const urlSegments = this.parseUrlTemplate(template, params);
         this.cargando = true;
 
+        console.log(`GET ${urlSegments.join('/')} ${this.cargando}`);
+
         return this.genericService.getEntities(urlSegments, cgdnCode, baseSegment, queryParams).pipe(
             tap({
                 next: (data) => {
                     this.setData(data);
                     this.cargando = false;
-                },
-                error: () => {
-                    this.cargando = false;
+
+                    console.log(`GET ${urlSegments.join('/')} ${this.cargando}`);
                 }
             })
         );
@@ -68,9 +66,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
             tap({
                 next: (data) => {
                     this.appendData(data);
-                    this.cargando = false;
-                },
-                error: () => {
                     this.cargando = false;
                 }
             })
@@ -87,9 +82,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
                 next: (data) => {
                     this.updateData(data);
                     this.cargando = false;
-                },
-                error: () => {
-                    this.cargando = false;
                 }
             })
         );
@@ -104,9 +96,6 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
             tap({
                 next: (data) => {
                     this.removeData(data);
-                    this.cargando = false;
-                },
-                error: () => {
                     this.cargando = false;
                 }
             })

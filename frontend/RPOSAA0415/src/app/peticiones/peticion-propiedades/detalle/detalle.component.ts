@@ -2,8 +2,13 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IJsonApiData } from '@morphe/common';
+import { Observable } from 'rxjs';
+import { IEstadosPosiblesDeUnaPeticionResponseAttributes } from 'src/app/models/RPOS415/EstadosPosiblesDeUnaPeticionResponseAttributes';
 import { IPropiedadPeticionPutRequestAttributes } from 'src/app/models/RPOS415/PropiedadPeticionPutRequestAttributes';
+import { EstadoPosibleService } from 'src/app/services/estados/estado-posible.service';
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
+import { PropiedadesEstadoService } from 'src/app/services/propiedad-peticion/propiedades-estado.service';
 
 @Component({
     selector: 'abanca-detalle',
@@ -15,11 +20,17 @@ export class DetalleComponent {
     formulario: FormGroup;
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
     idPropiedad = this.activatedRoute.snapshot.params['idPropiedad'];
+    esPropiedadEstado = false;
+    tipoItemId = 'DLL'; // TODO: Cambiar por el valor correcto
+    estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
+
     constructor(
         private activatedRoute: ActivatedRoute,
         private snackBar: MatSnackBar,
         private router: Router,
-        private propiedadPeticionService: PropiedadPeticionService) {
+        private propiedadPeticionService: PropiedadPeticionService,
+        private propiedadesEstadoService: PropiedadesEstadoService,
+        private estadoPosibleService: EstadoPosibleService) {
 
         this.formulario = new FormGroup({
             clave: new FormControl('', Validators.required),
@@ -27,7 +38,14 @@ export class DetalleComponent {
             valor: new FormControl('', Validators.required),
         });
 
+        this.estadoPosibleService.get$(this.tipoItemId).subscribe(
+            (estados) => {
+                this.estados = estados;
+            }
+        );
+
         propiedadPeticionService.getEntity$(this.idPeticion, this.idPropiedad).subscribe((propiedad) => {
+            this.esPropiedadEstado = this.propiedadesEstadoService.esPropiedadEstado(propiedad);
             this.formulario.get('clave')?.setValue(propiedad.clave);
             this.formulario.get('nombre')?.setValue(propiedad.nombre);
             this.formulario.get('valor')?.setValue(propiedad.valor);
@@ -35,6 +53,12 @@ export class DetalleComponent {
     }
     public get cargando(): boolean {
         const cargando: boolean = this.propiedadPeticionService.cargando;
+
+        return cargando;
+    }
+
+    public get cargandoEstadosPosibles(): boolean {
+        const cargando: boolean = this.estadoPosibleService.cargando;
 
         return cargando;
     }

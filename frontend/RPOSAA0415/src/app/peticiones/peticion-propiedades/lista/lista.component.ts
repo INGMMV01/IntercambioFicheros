@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
 import { MatSort, Sort, SortDirection } from '@angular/material/sort';
@@ -7,13 +7,15 @@ import { MatTableDataSource } from '@angular/material/table';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { IJsonApiData } from '@morphe/common';
+import { Observable } from 'rxjs';
 import { IFiltros } from 'src/app/models/propiedad-peticion/Filtros';
+import { IEstadosPosiblesDeUnaPeticionResponseAttributes } from 'src/app/models/RPOS415/EstadosPosiblesDeUnaPeticionResponseAttributes';
 import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
-import { EstadoPosibleService } from 'src/app/services/estados/estado-posible.service';
 import { EstadoBusquedaPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/estado-busqueda-propiedades-peticion.service';
 import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/filtro-propiedades-peticion.service';
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
+import { PropiedadesEstadoService } from 'src/app/services/propiedad-peticion/propiedades-estado.service';
 
 @Component({
     selector: 'abanca-lista',
@@ -68,7 +70,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
     }
 
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
-
+    estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
     constructor(
         private activatedRoute: ActivatedRoute,
         private datePipe: DatePipe,
@@ -76,6 +78,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
         private propiedadPeticionService: PropiedadPeticionService,
+        private propiedadesEstadoService: PropiedadesEstadoService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,
@@ -105,6 +108,12 @@ export class ListaComponent implements OnInit, AfterViewInit {
         });
 
         this.propiedadPeticionService.getData$().subscribe(data => {
+            // recorre el data y añade a cada elemento un atributo con la descripción del estado
+            data.forEach(propiedad => {
+                this.propiedadesEstadoService.resuelvePropiedadEstado$(propiedad.attributes).subscribe(estado => {
+                    propiedad.attributes.valor = estado;
+                });
+            });
             this.dataSource.data = data;
         });
     }
@@ -131,6 +140,10 @@ export class ListaComponent implements OnInit, AfterViewInit {
 
             return this.coincideFiltro(data, filtros);
         };
+    }
+
+    public resolverEstado$(propiedad: IJsonApiData<IPropiedadPeticionResponseAttributes>): Observable<string> {
+        return this.propiedadesEstadoService.resuelvePropiedadEstado$(propiedad.attributes);
     }
 
     public sortChange(event: Sort): void {

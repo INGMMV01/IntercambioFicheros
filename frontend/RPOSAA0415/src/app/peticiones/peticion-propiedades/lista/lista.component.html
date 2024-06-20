@@ -17,8 +17,9 @@
       <ng-container matColumnDef="valor">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Valor </th>
         <td mat-cell class="truncate" *matCellDef="let element" [matTooltip]="element.attributes.valor"
-          matTooltipPosition="above"> {{
-          element.attributes.valor }} </td>
+          matTooltipPosition="above">
+          {{ element.attributes.valor }}
+        </td>
       </ng-container>
 
       <!-- Fecha de Modificación de la Propiedad de Petición -->

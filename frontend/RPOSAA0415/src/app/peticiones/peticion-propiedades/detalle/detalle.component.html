@@ -17,19 +17,30 @@
     </div>
   </div>
 
-  <mat-form-field class="formularioClave">
+  <!-- <mat-form-field class="formularioClave">
     <mat-label>Clave</mat-label>
     <input #nombre matInput formControlName="clave" placeholder="Clave">
-  </mat-form-field>
+  </mat-form-field> -->
 
   <mat-form-field class="formularioNombre">
     <mat-label>Nombre</mat-label>
-    <input #nombre matInput formControlName="nombre" placeholder="Nombre">
+    <input #nombre matInput formControlName="nombre" placeholder="Nombre" readonly>
   </mat-form-field>
 
-  <mat-form-field class="formularioValor">
+  <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
     <input #nombre matInput formControlName="valor" placeholder="Valor">
+  </mat-form-field>
+
+  <abanca-cargando [valorLoading]="cargandoEstadosPosibles" *ngIf="esPropiedadEstado"></abanca-cargando>
+  <mat-form-field class="formularioValorEstado" *ngIf="esPropiedadEstado && !cargandoEstadosPosibles">
+    <mat-label>Valor</mat-label>
+    <mat-select formControlName="valor">
+      <mat-option value="">{{ '-- Selecciona un valor --' }}</mat-option>
+      <mat-option *ngFor="let estado of estados" [value]="estado.attributes.codigoDeEstado.toString()">
+       {{ estado.attributes.descripcion }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 
   <div class="error-summary">

@@ -49,3 +49,11 @@
   color: #f44336;
   margin-top: 5px;
 }
+
+
+/* CSS para hacer que readonly parezca deshabilitado */
+input[readonly] {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: default;
+  /* Cambiar el cursor a no permitido */
+}
