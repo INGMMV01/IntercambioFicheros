@@ -36,7 +36,7 @@ export class EstadoService {
         return this.genericDataService.get$(urlGetAllTemplate, params, cgdnCode, baseTemplate, queryParams);
     }
 
-    // Método para obtener el estado de los datos
+    // Método para subscribirse al estado de los datos
     getData$(): Observable<IJsonApiData<ResponseType>[]> {
         return this.genericDataService.getData$();
     }

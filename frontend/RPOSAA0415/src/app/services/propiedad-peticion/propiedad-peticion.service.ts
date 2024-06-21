@@ -81,7 +81,7 @@ export class PropiedadPeticionService {
         return this.genericDataService.delete$(urlDeleteTemplate, params, cgdnCode, baseTemplate);
     }
 
-    // Método para obtener el estado de los datos
+    // Método para subscribirse al estado de los datos
     getData$(): Observable<IJsonApiData<ResponseType>[]> {
         return this.genericDataService.getData$();
     }

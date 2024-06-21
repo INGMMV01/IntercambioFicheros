@@ -19,13 +19,23 @@
 
   <mat-form-field class="formularioClave">
     <mat-label>Clave</mat-label>
+    <mat-select formControlName="clave">
+      <mat-option value="">{{ '-- Selecciona un valor --' }}</mat-option>
+      <mat-option *ngFor="let tipo of tiposDePropiedadDePeticion" [value]="tipo.attributes.clave">
+        {{ tipo.attributes.descripcion }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- <mat-form-field class="formularioClave">
+    <mat-label>Clave</mat-label>
     <input #nombre matInput formControlName="clave" placeholder="Clave">
   </mat-form-field>
 
   <mat-form-field class="formularioNombre">
     <mat-label>Nombre</mat-label>
     <input #nombre matInput formControlName="nombre" placeholder="Nombre">
-  </mat-form-field>
+  </mat-form-field> -->
 
   <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
