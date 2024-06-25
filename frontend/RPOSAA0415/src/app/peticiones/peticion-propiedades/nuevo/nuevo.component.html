@@ -18,24 +18,14 @@
   </div>
 
   <mat-form-field class="formularioClave">
-    <mat-label>Clave</mat-label>
-    <mat-select formControlName="clave">
+    <mat-label>Tipo de propiedad de petición</mat-label>
+    <mat-select formControlName="clave" (selectionChange)="changeTipoDePropiedad($event.value)">
       <mat-option value="">{{ '-- Selecciona un valor --' }}</mat-option>
-      <mat-option *ngFor="let tipo of tiposDePropiedadDePeticion" [value]="tipo.attributes.clave">
+      <mat-option *ngFor="let tipo of tiposDePropiedadDePeticion" [value]="tipo.attributes.codigoDeTipoDePropiedad">
         {{ tipo.attributes.descripcion }}
       </mat-option>
     </mat-select>
   </mat-form-field>
-
-  <!-- <mat-form-field class="formularioClave">
-    <mat-label>Clave</mat-label>
-    <input #nombre matInput formControlName="clave" placeholder="Clave">
-  </mat-form-field>
-
-  <mat-form-field class="formularioNombre">
-    <mat-label>Nombre</mat-label>
-    <input #nombre matInput formControlName="nombre" placeholder="Nombre">
-  </mat-form-field> -->
 
   <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
@@ -55,9 +45,7 @@
 
   <div class="error-summary">
     <div *ngIf="formulario.invalid && formulario.get('clave')?.touched && formulario.get('clave')?.errors?.required"
-      class="error-message">El campo clave es obligatorio.</div>
-    <div *ngIf="formulario.invalid && formulario.get('nombre')?.touched && formulario.get('nombre')?.errors?.required"
-      class="error-message">El campo nombre es obligatorio.</div>
+      class="error-message">El campo tipo de propiedad de petición es obligatorio.</div>
     <div *ngIf="formulario.invalid && formulario.get('valor')?.touched && formulario.get('valor')?.errors?.required"
       class="error-message">El campo valor es obligatorio.</div>
   </div>
