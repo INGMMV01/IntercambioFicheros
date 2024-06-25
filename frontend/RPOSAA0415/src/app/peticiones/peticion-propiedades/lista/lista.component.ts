@@ -15,7 +15,7 @@ import { EstadoBusquedaPropiedadesPeticionService } from 'src/app/services/propi
 import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-peticion/filtro-propiedades-peticion.service';
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
-import { PropiedadesEstadoService } from 'src/app/services/propiedad-peticion/propiedades-estado.service';
+import { PropiedadPeticionEstadoService } from 'src/app/services/propiedad-peticion/propiedad-peticion-estado.service';
 
 @Component({
     selector: 'abanca-lista',
@@ -78,7 +78,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
         private propiedadPeticionService: PropiedadPeticionService,
-        private propiedadesEstadoService: PropiedadesEstadoService,
+        private propiedadesEstadoService: PropiedadPeticionEstadoService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,

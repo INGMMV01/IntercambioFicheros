@@ -9,8 +9,8 @@ import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/Pro
 @Injectable({
     providedIn: 'root'
 })
-export class PropiedadesEstadoService {
-    private _clavesDeEstados: string[] = ['1', '4', '5', '10', '11', '12'];
+export class PropiedadPeticionEstadoService {
+    private _clavesDeEstados: string[] = ['1', '4', '5', '10', '11', '12','CodigoEstadoDeLaPeticion'];
     private estadosSubject: BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]> =
     new BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]>([]);
     private estadosCargados = false;
@@ -29,7 +29,7 @@ export class PropiedadesEstadoService {
 
     esPropiedadEstado(propiedadPeticion: IPropiedadPeticionResponseAttributes): boolean {
         let esEstado = false;
-        esEstado = this.clavesDeEstados.includes(propiedadPeticion.clave);
+        esEstado = this.clavesDeEstados.includes(propiedadPeticion.clave.toString());
 
         return esEstado;
     }

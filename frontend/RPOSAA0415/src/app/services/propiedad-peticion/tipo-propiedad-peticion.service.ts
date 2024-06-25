@@ -3,9 +3,10 @@ import { GenericDataService } from '../generic-data.service';
 import { GenericService } from '../generic.service';
 import { IJsonApiData } from '@morphe/common';
 import { Observable } from 'rxjs';
+import { ITiposDePropiedadDelaPeticionResponseAttributes } from 'src/app/models/RPOS415/TiposDePropiedadDelaPeticionResponseAttributes';
 
 // Cambia estos tipos según el modelo de datos que utilice tu nuevo servicio
-type ResponseType = never;
+type ResponseType = ITiposDePropiedadDelaPeticionResponseAttributes;
 
 // Cambia estos valores según la configuración de tu nuevo servicio
 const cgdnCode = 'RPOS415';
