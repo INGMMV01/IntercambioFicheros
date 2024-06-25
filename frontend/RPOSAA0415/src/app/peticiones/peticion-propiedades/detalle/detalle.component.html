@@ -55,7 +55,7 @@
   </div>
 
 </form>
-<mat-card>
+<mat-card *ngIf="cargando">
   <mat-card-content>
     <abanca-cargando [valorLoading]="cargando"></abanca-cargando>
   </mat-card-content>

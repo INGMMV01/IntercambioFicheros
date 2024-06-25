@@ -13,12 +13,8 @@ import { IJsonApiObject } from '@morphe/common';
 import { IJsonApiData } from '@morphe/common';
 import { IJsonApiCollection } from '@morphe/common';
 import { ITiposDePropiedadDelaPeticionResponseAttributes
-       } from './TiposDePropiedadDelaPeticionResponseAttributes';
+} from './TiposDePropiedadDelaPeticionResponseAttributes';
 
-export interface ITiposDePropiedadDelaPeticionResponse
-       extends IJsonApiObject<ITiposDePropiedadDelaPeticionResponseAttributes> {
-}
+export type ITiposDePropiedadDelaPeticionResponse = IJsonApiObject<ITiposDePropiedadDelaPeticionResponseAttributes>;
 
-export interface ITiposDePropiedadDelaPeticionResponseCollection
-       extends IJsonApiCollection<ITiposDePropiedadDelaPeticionResponseAttributes> {
-}
+export type ITiposDePropiedadDelaPeticionResponseCollection = IJsonApiCollection<ITiposDePropiedadDelaPeticionResponseAttributes>;
