@@ -9,7 +9,9 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
         <td mat-cell class="truncate" *matCellDef="let element" [matTooltip]="element.attributes.nombre"
           matTooltipPosition="above">
-          {{ element.attributes.nombre }}
+          <a class="detalle-link" [routerLink]="['/', 'peticiones', idPeticion, 'propiedades', element.id]">
+            {{element.attributes.nombre}}
+          </a>
         </td>
       </ng-container>
 
