@@ -24,6 +24,18 @@ export const apiRegistryConfig: Array<ApiInformationRegistryConfigSimple> = [
         cgdnCode: 'RPOS415',
         allApikey: 'E7C9B19C-C12B-4640-9AEA-8054178433A7',
         baseUriCustomizations: [],
+        // baseUriCustomizations: [
+        //     {
+        //         apikey: 'E7C9B19C-C12B-4640-9AEA-8054178433A7',
+        //         rootPath: 'http://localhost:80/RPOS415/',
+        //         contextConfig: {
+        //             environment: Environment.Local,
+        //             instance: Instance.España,
+        //             networkZone: NetworkZone.Intranet,
+        //             profile: null
+        //         }
+        //     }
+        // ],
     },
 ];
 

@@ -16,6 +16,7 @@ import { FiltroPropiedadesPeticionService } from 'src/app/services/propiedad-pet
 import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout-medidas.service';
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
 import { PropiedadPeticionEstadoService } from 'src/app/services/propiedad-peticion/propiedad-peticion-estado.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'abanca-lista',
@@ -77,6 +78,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         private paginator: MatPaginatorIntl,
         iconRegistry: MatIconRegistry,
         sanitizer: DomSanitizer,
+        private snackBar: MatSnackBar,
         private propiedadPeticionService: PropiedadPeticionService,
         private propiedadesEstadoService: PropiedadPeticionEstadoService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
@@ -161,15 +163,23 @@ export class ListaComponent implements OnInit, AfterViewInit {
 
         return cargando;
     }
+    public set cargandoPropiedadesPeticion(value: boolean) {
+        this.propiedadPeticionService.cargando = value;
+    }
+
 
     public eliminar(idPropiedad: string): void {
         const observable = this.propiedadPeticionService.getEntity$(this.idPeticion, idPropiedad);
 
         observable.subscribe((respuesta: IPropiedadPeticionResponseAttributes) => {
-            if (confirm(`¿Confirma que desea eliminar la propiedad de petición '${respuesta.nombre}'?`)) {
-                this.propiedadPeticionService.delete$(this.idPeticion, idPropiedad).subscribe(() => {
-                });
-            }
+            setTimeout(() => {
+                if (confirm(`¿Confirma que desea eliminar la propiedad de petición '${respuesta.nombre}'?`)) {
+                    this.propiedadPeticionService.delete$(this.idPeticion, idPropiedad).subscribe(() => {
+                        this.snackBar.open(`La propiedad de petición '${respuesta.nombre}' se ha eliminado correctamente.`,
+                            undefined, { duration: 3000 });
+                    });
+                }
+            }, 100);
         });
     }
 
