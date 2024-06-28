@@ -163,14 +163,14 @@ export class ListaComponent implements OnInit, AfterViewInit {
     }
 
     public eliminar(idPropiedad: string): void {
-        // const observable = this.propiedadesPeticionService.obtenerDetallePropiedadPeticion$(idPropiedad);
+        const observable = this.propiedadPeticionService.getEntity$(this.idPeticion, idPropiedad);
 
-        // observable.subscribe((respuesta: IPropiedadPeticionResponseAttributes) => {
-        //     if (confirm(`¿Confirma que desea eliminar la propiedad de petición '${respuesta.nombre}'?`)) {
-        //         this.propiedadesPeticionService.eliminarEquipoFuncional$(idPropiedad).subscribe(() => {
-        //         });
-        //     }
-        // });
+        observable.subscribe((respuesta: IPropiedadPeticionResponseAttributes) => {
+            if (confirm(`¿Confirma que desea eliminar la propiedad de petición '${respuesta.nombre}'?`)) {
+                this.propiedadPeticionService.delete$(this.idPeticion, idPropiedad).subscribe(() => {
+                });
+            }
+        });
     }
 
     private registrarIconos(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer): void {

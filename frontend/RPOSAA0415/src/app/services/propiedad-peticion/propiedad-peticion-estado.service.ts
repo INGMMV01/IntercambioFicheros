@@ -12,7 +12,7 @@ import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/Pro
 export class PropiedadPeticionEstadoService {
     private _clavesDeEstados: string[] = ['1', '4', '5', '10', '11', '12', 'CodigoEstadoDeLaPeticion'];
     private estadosSubject: BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]> =
-        new BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]>([]);
+    new BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]>([]);
     private estadosCargados = false;
 
     constructor(private estadoService: EstadoService) {
