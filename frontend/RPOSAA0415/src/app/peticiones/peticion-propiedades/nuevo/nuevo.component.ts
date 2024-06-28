@@ -10,6 +10,7 @@ import { IPropiedadPeticionPostRequestAttributes } from 'src/app/models/RPOS415/
 import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
 import { EstadoPosibleService } from 'src/app/services/estados/estado-posible.service';
 import { PeticionesService } from 'src/app/services/peticion/peticiones.service';
+import { PropiedadPeticionEditableService } from 'src/app/services/propiedad-peticion/propiedad-peticion-editable.service';
 import { PropiedadPeticionEstadoService } from 'src/app/services/propiedad-peticion/propiedad-peticion-estado.service';
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
 import { TipoPropiedadPeticionService } from 'src/app/services/propiedad-peticion/tipo-propiedad-peticion.service';
@@ -25,7 +26,8 @@ export class NuevoComponent {
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
     esPropiedadEstado = false;
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
-    tiposDePropiedadDePeticion: any = []; // TODO: Cambiar por el valor correcto
+    tiposDePropiedadDePeticion: any = [];
+    esEditable = true;
     constructor(
         private activatedRoute: ActivatedRoute,
         private snackBar: MatSnackBar,
@@ -33,6 +35,7 @@ export class NuevoComponent {
         private peticionesService: PeticionesService,
         private propiedadPeticionService: PropiedadPeticionService,
         private propiedadPeticionEstadoService: PropiedadPeticionEstadoService,
+        private propiedadPeticionEditableService: PropiedadPeticionEditableService,
         private tipoPropiedadPeticionService: TipoPropiedadPeticionService,
         private estadoPosibleService: EstadoPosibleService) {
 
@@ -52,8 +55,14 @@ export class NuevoComponent {
 
         this.tipoPropiedadPeticionService.get$().subscribe(
             (tipoPropiedades) => {
-                this.tiposDePropiedadDePeticion = tipoPropiedades.sort((a, b) =>
-                    a.attributes.descripcion.localeCompare(b.attributes.descripcion));
+                // Filtrar primero las propiedades que son editables
+                this.tiposDePropiedadDePeticion = tipoPropiedades.filter(propiedad =>
+                    !this.propiedadPeticionEditableService.clavesNoEditables.includes(propiedad.id)
+                )
+                // Luego, ordenar las propiedades editables por descripción
+                    .sort((a, b) =>
+                        a.attributes.descripcion.localeCompare(b.attributes.descripcion)
+                    );
             }
         );
 
