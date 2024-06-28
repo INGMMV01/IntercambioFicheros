@@ -10,9 +10,9 @@ import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/Pro
     providedIn: 'root'
 })
 export class PropiedadPeticionEstadoService {
-    private _clavesDeEstados: string[] = ['1', '4', '5', '10', '11', '12','CodigoEstadoDeLaPeticion'];
+    private _clavesDeEstados: string[] = ['1', '4', '5', '10', '11', '12', 'CodigoEstadoDeLaPeticion'];
     private estadosSubject: BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]> =
-    new BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]>([]);
+        new BehaviorSubject<IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[]>([]);
     private estadosCargados = false;
 
     constructor(private estadoService: EstadoService) {
@@ -29,7 +29,9 @@ export class PropiedadPeticionEstadoService {
 
     esPropiedadEstado(propiedadPeticion: IPropiedadPeticionResponseAttributes): boolean {
         let esEstado = false;
-        esEstado = this.clavesDeEstados.includes(propiedadPeticion.clave.toString());
+        if (propiedadPeticion.clave !== undefined) {
+            esEstado = this.clavesDeEstados.includes(propiedadPeticion.clave.toString());
+        }
 
         return esEstado;
     }
@@ -40,7 +42,7 @@ export class PropiedadPeticionEstadoService {
             return this.getEstados$().pipe(
                 map(estados => {
                     // Encuentra el estado que corresponde al valor de la propiedad
-                    const estado = estados.find(e => e.attributes.codigoDeEstado.toString() === propiedadPeticion.valor);
+                    const estado = estados.find(e => e.attributes.codigoDeEstado !== null && e.attributes.codigoDeEstado.toString() === propiedadPeticion.valor);
 
                     // Retorna la descripción del estado o el valor original si no se encuentra el estado
                     return estado ? estado.attributes.descripcion : propiedadPeticion.valor;
