@@ -45,8 +45,4 @@ export class EstadoService {
     get cargando(): boolean {
         return this.genericDataService.cargando;
     }
-
-    set cargando(value: boolean) {
-        this.genericDataService.cargando = value;
-    }
 }

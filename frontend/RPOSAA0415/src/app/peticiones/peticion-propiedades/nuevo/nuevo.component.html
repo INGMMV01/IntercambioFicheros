@@ -1,7 +1,6 @@
-<form [formGroup]="formulario" class="formulario" *ngIf="!cargando">
+<form [formGroup]="formulario" class="formulario" *ngIf="!cargando && !guardando">
   <div class="cabecera-contenido">
     <h2>Nueva propiedad de petición '{{idPeticion}}'</h2>
-
     <div class="botones">
       <button [routerLink]="['/', 'peticiones', idPeticion, 'propiedades']" mat-raised-button color="accent">
         <div class="icono-boton">
@@ -32,7 +31,7 @@
     <input #nombre matInput formControlName="valor" placeholder="Valor">
   </mat-form-field>
 
-  <abanca-cargando [valorLoading]="cargandoEstadosPosibles" *ngIf="esPropiedadEstado"></abanca-cargando>
+  <abanca-cargando [valorLoading]="cargandoEstadosPosibles" msg="Cargando estados..." *ngIf="esPropiedadEstado"></abanca-cargando>
   <mat-form-field class="formularioValorEstado" *ngIf="esPropiedadEstado && !cargandoEstadosPosibles">
     <mat-label>Valor</mat-label>
     <mat-select formControlName="valor">
@@ -51,8 +50,13 @@
   </div>
 
 </form>
-<mat-card *ngIf="cargando">
+<mat-card *ngIf="cargando" class="mat-card-cargando">
   <mat-card-content>
-    <abanca-cargando [valorLoading]="cargando"></abanca-cargando>
+    <abanca-cargando [valorLoading]="cargando" msg="Cargando..."></abanca-cargando>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="guardando" class="mat-card-cargando">
+  <mat-card-content>
+    <abanca-cargando [valorLoading]="guardando" msg="Guardando..."></abanca-cargando>
   </mat-card-content>
 </mat-card>

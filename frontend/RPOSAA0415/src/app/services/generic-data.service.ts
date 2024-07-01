@@ -22,27 +22,19 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
         return this._cargando;
     }
 
-    public set cargando(value: boolean) {
-        this._cargando = value;
-    }
-
     public get guardando(): boolean {
-        return this._cargando;
-    }
-
-    public set guardando(value: boolean) {
-        this._cargando = value;
+        return this._guardando;
     }
 
     getEntity$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
     Observable<ResponseType> {
-        this.cargando = true;
+        this._cargando = true;
         const urlSegments = this.parseUrlTemplate(template, params);
 
         return this.genericService.getEntity(urlSegments, cgdnCode, baseSegment).pipe(
             tap({
                 next: () => {
-                    this.cargando = false;
+                    this._cargando = false;
                 }
             })
         );
@@ -51,14 +43,12 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     get$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, queryParams?: Record<string, any>):
     Observable<IJsonApiData<ResponseType>[]> {
         const urlSegments = this.parseUrlTemplate(template, params);
-        this.cargando = true;
-
-        console.log(`GET ${urlSegments.join('/')} ${this.cargando}`);
+        this._cargando = true;
 
         return this.genericService.getEntities(urlSegments, cgdnCode, baseSegment, queryParams).pipe(
             tap({
                 next: (data) => {
-                    this.cargando = false;
+                    this._cargando = false;
                     this.setData(data);
                 }
             })
@@ -68,13 +58,13 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     add$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PostRequestType):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
-        this.guardando = true;
+        this._guardando = true;
 
         return this.genericService.addEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
                 next: (data) => {
                     this.appendData(data);
-                    this.guardando = false;
+                    this._guardando = false;
                 }
             })
         );
@@ -83,13 +73,13 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     update$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string, entity: PutRequestType):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
-        this.guardando = true;
+        this._guardando = true;
 
         return this.genericService.updateEntity(urlSegments, cgdnCode, baseSegment, entity).pipe(
             tap({
                 next: (data) => {
                     this.updateData(data);
-                    this.guardando = false;
+                    this._guardando = false;
                 }
             })
         );
@@ -98,13 +88,13 @@ export class GenericDataService<ResponseType, PostRequestType, PutRequestType> {
     delete$(template: string, params: Record<string, any>, cgdnCode: string, baseSegment: string):
     Observable<IJsonApiData<ResponseType>> {
         const urlSegments = this.parseUrlTemplate(template, params);
-        this.guardando = true;
+        this._guardando = true;
 
         return this.genericService.deleteEntity(urlSegments, cgdnCode, baseSegment).pipe(
             tap({
                 next: (data) => {
                     this.removeData(data);
-                    this.guardando = false;
+                    this._guardando = false;
                 }
             })
         );

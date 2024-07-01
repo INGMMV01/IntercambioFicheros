@@ -1,15 +1,14 @@
-<form [formGroup]="formulario" class="formulario" *ngIf="!cargando">
+<form [formGroup]="formulario" class="formulario" *ngIf="!cargando && !guardando">
   <div class="cabecera-contenido">
     <h2>Modificar propiedad de petición '{{idPeticion}}'</h2>
-
     <div class="botones">
       <button [routerLink]="['/', 'peticiones', idPeticion, 'propiedades']" mat-raised-button color="accent">
         <div class="icono-boton">
           <mat-icon>arrow_back</mat-icon> Volver
         </div>
       </button>
-      <button [disabled]="formulario.invalid || !esEditable" style="margin-left: 0.5em" mat-raised-button color="primary"
-        (click)="guardar()">
+      <button [disabled]="formulario.invalid || !esEditable" style="margin-left: 0.5em" mat-raised-button
+        color="primary" (click)="guardar()">
         <div class="icono-boton">
           <mat-icon>save</mat-icon>&nbsp;Guardar
         </div>
@@ -29,7 +28,7 @@
 
   <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
-    <input #nombre matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable" >
+    <input #nombre matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable">
   </mat-form-field>
 
   <abanca-cargando [valorLoading]="cargandoEstadosPosibles" *ngIf="esPropiedadEstado"></abanca-cargando>
@@ -38,7 +37,7 @@
     <mat-select formControlName="valor" [disabled]="!esEditable">
       <mat-option value="">{{ '-- Selecciona un valor --' }}</mat-option>
       <mat-option *ngFor="let estado of estados" [value]="estado.attributes.codigoDeEstado.toString()">
-       {{ estado.attributes.descripcion }}
+        {{ estado.attributes.descripcion }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -50,13 +49,17 @@
       class="error-message">El campo nombre es obligatorio.</div>
     <div *ngIf="formulario.invalid && formulario.get('valor')?.touched && formulario.get('valor')?.errors?.required"
       class="error-message">El campo valor es obligatorio.</div>
-      <div *ngIf="!esEditable"
-        class="error-message">Esta propiedad de petición no es editable.</div>
+    <div *ngIf="!esEditable" class="error-message">Esta propiedad de petición no es editable.</div>
   </div>
 
 </form>
-<mat-card *ngIf="cargando">
+<mat-card *ngIf="cargando" class="mat-card-cargando">
   <mat-card-content>
-    <abanca-cargando [valorLoading]="cargando"></abanca-cargando>
+    <abanca-cargando [valorLoading]="cargando" msg="Cargando..."></abanca-cargando>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="guardando" class="mat-card-cargando">
+  <mat-card-content>
+    <abanca-cargando [valorLoading]="guardando" msg="Guardando..."></abanca-cargando>
   </mat-card-content>
 </mat-card>

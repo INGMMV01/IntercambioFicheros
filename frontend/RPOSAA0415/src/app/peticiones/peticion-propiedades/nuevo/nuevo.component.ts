@@ -80,6 +80,12 @@ export class NuevoComponent {
         return cargando;
     }
 
+    public get guardando(): boolean {
+        const guardando: boolean = this.propiedadPeticionService.guardando;
+
+        return guardando;
+    }
+
     changeTipoDePropiedad(valor: string): void {
         if (valor) {
             const propiedadPeticionResponseAttributes = new Object() as IPropiedadPeticionResponseAttributes;

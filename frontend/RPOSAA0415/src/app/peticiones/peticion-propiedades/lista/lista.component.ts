@@ -163,9 +163,6 @@ export class ListaComponent implements OnInit, AfterViewInit {
 
         return cargando;
     }
-    public set cargandoPropiedadesPeticion(value: boolean) {
-        this.propiedadPeticionService.cargando = value;
-    }
 
 
     public eliminar(idPropiedad: string): void {

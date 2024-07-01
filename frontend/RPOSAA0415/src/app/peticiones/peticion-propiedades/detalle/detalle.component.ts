@@ -75,6 +75,12 @@ export class DetalleComponent {
         return cargando;
     }
 
+    public get guardando(): boolean {
+        const guardando: boolean = this.propiedadPeticionService.guardando;
+
+        return guardando;
+    }
+
     guardar(): void {
 
         this.formulario.updateValueAndValidity();
