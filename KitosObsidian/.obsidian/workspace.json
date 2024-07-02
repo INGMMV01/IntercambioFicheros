@@ -18,8 +18,43 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "aaab9d1120016df9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
+          },
+          {
+            "id": "131655b47940b634",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_Inbox/cartera Golden Buterflay.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f0959d6de94f503a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_Inbox/cartera Golden Buterflay.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -85,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40_Recursos/Libros/La psicología del dinero.md",
+                "file": "10_Inbox/cartera Golden Buterflay.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40_Recursos/Libros/La psicología del dinero.md",
+                "file": "10_Inbox/cartera Golden Buterflay.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40_Recursos/Libros/La psicología del dinero.md"
+                "file": "10_Inbox/cartera Golden Buterflay.md"
               }
             }
           }
@@ -146,8 +181,14 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "77d2748029cd585b",
+  "active": "9942e9a3a39d0cf7",
   "lastOpenFiles": [
+    "10_Inbox/cartera Golden Buterflay.md",
+    "40_Recursos/Formación/Angular 13/Angular 13.md",
+    "40_Recursos/Libros/La psicología del dinero.md",
+    "40_Recursos/Formación/Angular 13/TypeScript.pdf",
+    "40_Recursos/Formación/Angular 13/Presentación Curso Angular 13.pdf",
+    "40_Recursos/Formación/Angular 13",
     "10_Inbox/lectura sobre ChatGPT.md",
     "40_Recursos/Formación/Curso TDD/Material Curso.md",
     "40_Recursos/Formación/Cursos.md",
@@ -159,9 +200,6 @@
     "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/libraries/desktop.ini",
     "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/libraries/custom.library.raml",
     "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Swagger/desktop.ini",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Swagger/api-documentos.yaml",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Swagger/openapi.yaml",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Swagger/api-2.yaml",
     "40_Recursos/Formación/Curso Gobierno APIs/5 notas Testing.md",
     "40_Recursos/Formación/Curso Gobierno APIs/4 notas Swagger.md",
     "40_Recursos/Formación/Curso Gobierno APIs/3 Notas RAML Diseño.md",
@@ -180,9 +218,6 @@
     "30_Areas/30_Ocio_Cultura/Libros/Repositorio libros.md",
     "30_Areas/30_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
     "30_Areas/30_Ocio_Cultura/Libros/Libros a leer.md",
-    "30_Areas/30_Ocio_Cultura/Cine/Películas.md",
-    "30_Areas/30_Ocio_Cultura/Cine/Series.md",
-    "30_Areas/30_Ocio_Cultura/Deporte/Conceptos deportivos.md",
-    "30_Areas/30_Ocio_Cultura/Deporte/Nutrición.md"
+    "30_Areas/30_Ocio_Cultura/Cine/Películas.md"
   ]
 }
