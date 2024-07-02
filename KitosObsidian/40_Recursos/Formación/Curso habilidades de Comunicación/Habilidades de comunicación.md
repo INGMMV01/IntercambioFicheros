@@ -2,6 +2,8 @@
 
 Pilar y Raimond. imantia
 
+## Día 1
+
 Partes del curso:
 - presentación de los miembros: aficiones
 - puntos fuertes y áreas de mejora en la comunicación
@@ -75,3 +77,61 @@ Ponerse en la piel de los demás para ver cómo le sentará o le está sentando 
 La respuesta que das a alguien activamente para darle información sobre la información que antes te han dado.
 Debe darse pronto, humilde, forma visual, auditiva o con movimiento, motivado y con alternativas
 La recepción debe ser atenta, abierta, agradecida, pedir motivaciones, alternativas 
+Técnica del sandwich: bueno - malo - bueno
+
+### Partes de la comunicación
+- Tarea
+- Dimensión relacional: empatía (elementos verbales y no verbales)
+
+## Día 2
+
+Optimización de la comunicación
+PNL: Programación neuro lingüistica o neuro lingüistica programada
+- Neuro -> sentidos
+- Lingüistica -> significado
+- Progamación -> acción
+
+Comunicación:
+- un mensaje ha sido enviado
+- un mensaje ha sido recibido y comprendido: VAC (visual, auditivo, cinestésico)
+
+Los mensajes se reciben mediante los sentidos, es decir, el sistema VAC. Cada persona o cada momento tiene un VAC preferente. Es importante intentar ver qué VAC está usando nuestro interlocutor para intentar alinearnos y aumentar la empatía.
+Normalmente podemos averiguarlo según su lenguaje:
+- lo veo negro
+- me suena mal
+- me parece muy duro
+
+Características de los canales:
+- Visual: voz más alta, más gestos, mirada alta
+- Auditivo: voz y gestos medios, mirada media
+- Cinestésico: voz, gestos y mirada bajas
+
+#### Ejercicio
+Escuchar una historia de otra persona, ver cuál es su canal predominante e intentar explicarle su propia historia imitando sus VAC.
+Cuanto más te alineas o compartes canal, mejor te entiendes con una persona. Si no es natural, conviene forzarlo para alinearse y mejorar la relación/comunicación.
+El comunicador/emisor es el que debe acomodarse al receptor.
+
+### Estilos de comunicación
+1. Agresivo: tono alto, velocidad, gesticulación. Provoca rabia o miedo
+2. Pasiva. Provoca desgana e ira
+3. Pasivo-agresivo: parece tener desgana pero guarda rabia
+4. Asertivo: equilibrio entre lo que quiero decir y lo que el otro quiere o necesita. Respeto. Reduce el conflicto
+  4.1. estrategia 1:
+  - te comprendo
+  - sin embargo...
+  - te propongo...
+  4.2. estrategia 2: Aplazar
+
+
+### Facilitar la comunicación
+El puzle de la comunicación: La comunicación que emitimos es siempre parcial por economía del lenguaje, tiempo...
+Las diferentes interpretaciones pueden dar lugar a confusión, es importante establecer los términos de la comunicación y concretar de qué se está hablando.
+Debemos especificar el qué, quién, cómo, dónde, cuándo...
+
+### Palabras marco
+Algunas palabras imprimen carácter a la expresión, por ejemplo un 'pero', 'y'
+- pero: a pero b: borra la primera parte y solo queda la segunda
+- aunque : a aunque b: borra la segunda parte y solo queda la segunda
+- y: a y b: da el mismo peso a ambas partes
+
+## Día 3
