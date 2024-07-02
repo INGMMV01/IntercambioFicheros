@@ -17,6 +17,8 @@ import { LayoutMedidasService } from 'src/app/services/propiedad-peticion/layout
 import { PropiedadPeticionService } from 'src/app/services/propiedad-peticion/propiedad-peticion.service';
 import { PropiedadPeticionEstadoService } from 'src/app/services/propiedad-peticion/propiedad-peticion-estado.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { PropiedadPeticionEditableService } from 'src/app/services/propiedad-peticion/propiedad-peticion-editable.service';
+import { IPropiedadPeticionResponse } from 'src/app/models/RPOS415/PropiedadPeticionResponse';
 
 @Component({
     selector: 'abanca-lista',
@@ -82,6 +84,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         private propiedadPeticionService: PropiedadPeticionService,
         private propiedadesEstadoService: PropiedadPeticionEstadoService,
         private estadoBusquedaService: EstadoBusquedaPropiedadesPeticionService,
+        private propiedadPeticionEditableService: PropiedadPeticionEditableService,
         private filtroService: FiltroPropiedadesPeticionService,
         private layoutMedidasService: LayoutMedidasService,
         private cdRef: ChangeDetectorRef
@@ -164,6 +167,10 @@ export class ListaComponent implements OnInit, AfterViewInit {
         return cargando;
     }
 
+    public esEliminable(propiedad: IJsonApiData<IPropiedadPeticionResponseAttributes>): boolean {
+        return this.propiedadPeticionEditableService.esPropiedadEditable(propiedad.attributes)
+            && this.esClaveNumerica(propiedad.attributes.clave);
+    }
 
     public eliminar(idPropiedad: string): void {
         const observable = this.propiedadPeticionService.getEntity$(this.idPeticion, idPropiedad);
@@ -178,6 +185,10 @@ export class ListaComponent implements OnInit, AfterViewInit {
                 }
             }, 100);
         });
+    }
+
+    private esClaveNumerica(clave: string): boolean {
+        return /^[0-9]+$/.test(clave);
     }
 
     private registrarIconos(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer): void {
