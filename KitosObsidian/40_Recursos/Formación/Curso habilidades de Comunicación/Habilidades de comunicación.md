@@ -122,16 +122,95 @@ El comunicador/emisor es el que debe acomodarse al receptor.
   - te propongo...
   4.2. estrategia 2: Aplazar
 
-
 ### Facilitar la comunicación
 El puzle de la comunicación: La comunicación que emitimos es siempre parcial por economía del lenguaje, tiempo...
-Las diferentes interpretaciones pueden dar lugar a confusión, es importante establecer los términos de la comunicación y concretar de qué se está hablando.
+Las diferentes interpretaciones pueden dar lugar a confusión, es importante establecer los términos de la comunicación y concretar de qué se está hablando. 
+Si en el mensaje que te envían hay huecos, las personas rellenan los huecos con sus ideas.
 Debemos especificar el qué, quién, cómo, dónde, cuándo...
+Podemos usar las peguntar con elegancia para pedir más detalles "específicamente":
+- me podrías decir...?
+- tengo curiosidad...
 
 ### Palabras marco
-Algunas palabras imprimen carácter a la expresión, por ejemplo un 'pero', 'y'
+Algunas palabras imprimen carácter a la expresión dando peso o énfasis a una parte u otra de la frase:
 - pero: a pero b: borra la primera parte y solo queda la segunda
 - aunque : a aunque b: borra la segunda parte y solo queda la segunda
 - y: a y b: da el mismo peso a ambas partes
 
 ## Día 3
+
+### Dificultades de la comunicación
+Confundir mensaje con interpretación, hechos con significados.
+- la mente genera un discurso explicativo de las experiencias
+- Busca una explicación de lo que ocurre y hace suposiciones y juicios
+- Un juicio es un significado único que se atribuye a una experiencia
+
+En función de las interpretaciones obtenemos emociones. Las emociones provocan acciones. El problema viene cuando una mala interpretación provoca malas acciones.
+
+Hecho -> Significado/interpretación -> Consecuencia
+
+Si la emoción es intensa es importante hacer una pausa antes de comunicar.
+La libertad es la diferencia de tiempo entre el estímulo y la respuesta.
+
+Debemos ampliar la visión y buscar interpretaciones alternativas al hecho recibido. Quizás preguntando y escuchando.
+
+### Discurso
+La fórmula de la comunicación es 2RT: 2 partes de relación por una vez de tarea (comunicación)
+- la relación se refiere a la empatía
+
+En comunicaciones de alto nivel emocional, aplica la regla de Meg Raiban:
+- 35% de importancia a la voz
+- 55% cuerpo
+- 7% palabras/texto
+
+### Técnicas de oratoria, estructura del discurso
+- Objetivos
+  * informar
+  * persuadir
+  * conmover
+* Partes
+  * Presentación: anunciar lo que vamos a decir
+    * Necesitamos captadores de atención
+      * Presentación/presencia
+      * efecto imán: motivación, involucrar
+        * yo tengo algo valioso (mensaje): hacer preguntas o hacer presuposiciones para involucrar o conseguir la atención
+        * quiero dártelo (compartir)
+      * decir lo que voy a decir: resumen previo o índice
+  * Desarrollo: decir lo que queremos decir
+    * Mensajes clave
+    * ordenación y estructura
+  * Cierre: decir lo que hemos dicho: resumir, recopilar...
+    * recapitular
+    * relacionar la apertura con el cierre. Ejemplo de monólogos que acaban con el chiste inicial.
+    * dejar en un buen estado
+
+La atención de la audiencia está más abierta en al presentación y el cierre.
+
+Discurso modelo: Steve Jobs: 
+- presentación: 3 historias, alineamiento con la audiencia (nosotros)
+-  Provocar empatía, pausas para que cale
+- desarrollo: 3 historias.
+  - cada historia tiene su propia presentación o título, su desarrollo y su conclusión
+- resumen: conclusión
+
+### Relación entre liderazgo consciente y comunicación
+- buen nivel de autoconocimiento: antes del equipo, se lidera a sí mismo
+- mantiene el estado, mantiene la calma. Sabe calmar la mente, estar presenta y hacer una escucha efectiva
+- Habilidades comunicativas: comunicación más clara, precisa, evita malos entendidos
+- no reacciona, responde. Es capaz de poner distancia para no reaccionar de forma instantánea e impulsiva
+- es motivador y capaz de inspirar
+- Alto grado de resiliencia: 
+  - reto (oportunidades/soluciones) vs quejas/amenazas 
+  - compromiso: tiempo y esfuerzo
+  - Control: proacción, prepararme contenido, humor, anclas de atención
+    - Cículo de Cobe:
+      - Control: aplicar más esfuerzo en las actividades sobre las que se tiene control. Preparar Evitar
+      - Influencia: no tenemos control pero podemos influir un poco. Podemos indagar, mitigar
+      - preocupación: fuera de nuestro control, nada que hacer. Sólo podemos aceptar
+      
+    - Si te centras en tu círculo de control, éste aumenta de tamaño
+    - Si te centras en tu área de preocupación, también aumenta
+
+**Lo que cambia la vida no es la información que recibimos si no lo que hacemos con ella**
+
+## Dia 4
