@@ -47,8 +47,8 @@
       class="error-message">El campo clave es obligatorio.</div>
     <div *ngIf="formulario.invalid && formulario.get('nombre')?.touched && formulario.get('nombre')?.errors?.required"
       class="error-message">El campo nombre es obligatorio.</div>
-    <div *ngIf="formulario.invalid && formulario.get('valor')?.touched && formulario.get('valor')?.errors?.required"
-      class="error-message">El campo valor es obligatorio.</div>
+    <!-- <div *ngIf="formulario.invalid && formulario.get('valor')?.touched && formulario.get('valor')?.errors?.required"
+      class="error-message">El campo valor es obligatorio.</div> -->
     <div *ngIf="!esEditable" class="error-message">Esta propiedad de petición no es editable.</div>
   </div>
 

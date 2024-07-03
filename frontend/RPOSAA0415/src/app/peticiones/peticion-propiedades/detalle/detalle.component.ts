@@ -42,7 +42,8 @@ export class DetalleComponent {
         this.formulario = new FormGroup({
             clave: new FormControl('', Validators.required),
             nombre: new FormControl('', Validators.required),
-            valor: new FormControl('', Validators.required),
+            // valor: new FormControl('', Validators.required),
+            valor: new FormControl(''),
         });
 
         this.peticionesService.getEntity$(this.idPeticion).pipe(

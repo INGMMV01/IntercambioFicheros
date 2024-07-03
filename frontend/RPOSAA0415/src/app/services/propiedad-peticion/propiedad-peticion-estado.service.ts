@@ -43,8 +43,7 @@ export class PropiedadPeticionEstadoService {
             return this.getEstados$().pipe(
                 map(estados => {
                     // Encuentra el estado que corresponde al valor de la propiedad
-                    const estado = estados.find(e => e.attributes.codigoDeEstado
-                        && e.attributes.codigoDeEstado.toString() === propiedadPeticion.valor);
+                    const estado = estados.find(e => e.id === propiedadPeticion.valor);
 
                     // Retorna la descripción del estado o el valor original si no se encuentra el estado
                     return estado ? estado.attributes.descripcion : propiedadPeticion.valor;
