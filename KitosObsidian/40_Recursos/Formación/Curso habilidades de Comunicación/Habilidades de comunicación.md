@@ -213,4 +213,43 @@ Discurso modelo: Steve Jobs:
 
 **Lo que cambia la vida no es la información que recibimos si no lo que hacemos con ella**
 
-## Dia 4
+## Día 4
+
+### Comunicar con eficacia
+- Claridad y concisión
+- Naturalidad
+- Mantener la atención
+- Manejar interacciones difíciles
+- Mejorar el discurso
+- Captar la atención
+- Persuasión natural
+
+### Presencia
+- qué sintomas perciben en mí cuando hablo: transmitir calma, fijarse en el mensaje
+- verticalidad, triángulo (cabeza, codos), abrir el espacio
+- respiración calmada y abdominal, pecho abierto, espalda recta
+- iluminación
+- tono y volumen. Pausas y cambios de tono
+
+#### Tres pasos para entrenar tu presencia
+1. Imagina - visualiza: Piensa en cómo sería el ideal
+2. Siente - registra: estar presente, recordar
+3. Fija: relaja, mejora y fija 
+
+### Propuesta de ejercicios
+- grabación de audio de 2 a 5 minutos para evaluar la velocidad, muletillas, dubitaciones, interjecciones, respiración...
+- leer textos en voz alta. Pausas, volumen, cambios de tono, 
+
+
+### Mejoras en mi discurso
+- Mejorar respiración, exhalar
+- Presentación directa y sin dudas ni interjecciones (ehhh)
+- Tono más lento, evitar acelerarme. 
+- Pausas entre ideas para dejar que calen. Si se apilan, se pierden
+- Intentar pensar en que estás hablando con gente de confianza, disfrutando el contenido, sin artificios
+
+
+- presente, respiración
+- autoconocimiento
+- estructura del discurso
+- contexto y evitar malosentendidos (piezas del puzle)
