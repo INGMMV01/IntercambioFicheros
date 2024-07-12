@@ -26,6 +26,7 @@ import { MyErrorHandlerService } from './errores/my-error-handler.service';
 import { InputCodeResolverComponent } from './input-code-resolver/input-code-resolver.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ValidacionSnackbarComponent } from './validacion-snackbar/validacion-snackbar.component';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { ValidacionSnackbarComponent } from './validacion-snackbar/validacion-sn
         MoDirectivesModule,
         MatChipsModule,
         MatExpansionModule,
-        MatToolbarModule
+        MatToolbarModule,
+        TextFieldModule
     ],
     declarations: [
         CargandoComponent,
@@ -86,7 +88,8 @@ import { ValidacionSnackbarComponent } from './validacion-snackbar/validacion-sn
         MatToolbarModule,
         MatExpansionModule,
         InputCodeResolverComponent,
-        ValidacionSnackbarComponent
+        ValidacionSnackbarComponent,
+        TextFieldModule
     ],
     entryComponents: [
         ErrorDialogComponent,

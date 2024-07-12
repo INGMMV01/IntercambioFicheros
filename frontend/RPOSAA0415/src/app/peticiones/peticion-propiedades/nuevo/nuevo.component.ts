@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { Component, NgZone, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IJsonApiData } from '@morphe/common';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, take } from 'rxjs/operators';
 import { IEstadosPosiblesDeUnaPeticionResponseAttributes } from 'src/app/models/RPOS415/EstadosPosiblesDeUnaPeticionResponseAttributes';
 import { IPeticionResponseAttributes } from 'src/app/models/RPOS415/PeticionResponseAttributes';
 import { IPropiedadPeticionPostRequestAttributes } from 'src/app/models/RPOS415/PropiedadPeticionPostRequestAttributes';
@@ -28,7 +29,12 @@ export class NuevoComponent {
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
     tiposDePropiedadDePeticion: any = [];
     esEditable = true;
+
+    @ViewChild('autosize')
+    autosize!: CdkTextareaAutosize;
+
     constructor(
+        private _ngZone: NgZone,
         private activatedRoute: ActivatedRoute,
         private snackBar: MatSnackBar,
         private router: Router,
@@ -86,6 +92,10 @@ export class NuevoComponent {
         return guardando;
     }
 
+    triggerResize() {
+        // Wait for changes to be applied, then trigger textarea resize.
+        this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize.resizeToFitContent(true));
+    }
     changeTipoDePropiedad(valor: string): void {
         if (valor) {
             const propiedadPeticionResponseAttributes = new Object() as IPropiedadPeticionResponseAttributes;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,7 +13,8 @@ import { PropiedadPeticionEditableService } from 'src/app/services/propiedad-pet
 import { IPropiedadPeticionResponseAttributes } from 'src/app/models/RPOS415/PropiedadPeticionResponseAttributes';
 import { PeticionesService } from 'src/app/services/peticion/peticiones.service';
 import { IPeticionResponseAttributes } from 'src/app/models/RPOS415/PeticionResponseAttributes';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, take } from 'rxjs/operators';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 
 @Component({
     selector: 'abanca-detalle',
@@ -28,8 +29,11 @@ export class DetalleComponent {
     esPropiedadEstado = false;
     esEditable = true;
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
+    @ViewChild('autosize')
+    autosize!: CdkTextareaAutosize;
 
     constructor(
+        private _ngZone: NgZone,
         private activatedRoute: ActivatedRoute,
         private snackBar: MatSnackBar,
         private router: Router,
@@ -81,7 +85,10 @@ export class DetalleComponent {
 
         return guardando;
     }
-
+    triggerResize() {
+        // Wait for changes to be applied, then trigger textarea resize.
+        this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize.resizeToFitContent(true));
+    }
     guardar(): void {
 
         this.formulario.updateValueAndValidity();

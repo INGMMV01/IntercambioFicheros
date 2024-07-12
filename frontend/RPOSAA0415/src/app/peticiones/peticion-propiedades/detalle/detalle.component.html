@@ -28,7 +28,9 @@
 
   <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
-    <input #nombre matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable">
+    <!-- <input #nombre matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable"> -->
+    <textarea #autosize="cdkTextareaAutosize" matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable" cdkTextareaAutosize
+      rows="1" cols="20"></textarea>
   </mat-form-field>
 
   <abanca-cargando [valorLoading]="cargandoEstadosPosibles" *ngIf="esPropiedadEstado"></abanca-cargando>

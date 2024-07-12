@@ -39,7 +39,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         'acciones'
     ];
     pageIndex = 0;
-    pageSize = 10;
+    pageSize = 100;
     sortActive = '';
     sortDirection: SortDirection = 'asc';
     filtros: IFiltros;

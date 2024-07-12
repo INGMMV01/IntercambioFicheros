@@ -25,7 +25,7 @@ export class EstadoBusquedaPropiedadesPeticionService {
         this.sortDirection = '';
         this.sortActive = '';
         this.pageIndex = 0;
-        this.pageSize = 10;
+        this.pageSize = 100;
         this.tabIndex = 0;
         this.panelOpenState = false;
         this.referrer = '';
