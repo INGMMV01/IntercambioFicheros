@@ -22,6 +22,8 @@ import { CdkTextareaAutosize } from '@angular/cdk/text-field';
     styleUrls: ['./detalle.component.scss']
 })
 export class DetalleComponent {
+    @ViewChild('autosize')
+    autosize!: CdkTextareaAutosize;
 
     formulario: FormGroup;
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
@@ -29,8 +31,6 @@ export class DetalleComponent {
     esPropiedadEstado = false;
     esEditable = true;
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
-    @ViewChild('autosize')
-    autosize!: CdkTextareaAutosize;
 
     constructor(
         private _ngZone: NgZone,

@@ -23,15 +23,15 @@ import { TipoPropiedadPeticionService } from 'src/app/services/propiedad-peticio
 })
 export class NuevoComponent {
 
+    @ViewChild('autosize')
+    autosize!: CdkTextareaAutosize;
+
     formulario: FormGroup;
     idPeticion = this.activatedRoute.snapshot.params['idPeticion'];
     esPropiedadEstado = false;
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
     tiposDePropiedadDePeticion: any = [];
     esEditable = true;
-
-    @ViewChild('autosize')
-    autosize!: CdkTextareaAutosize;
 
     constructor(
         private _ngZone: NgZone,
