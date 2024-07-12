@@ -1,0 +1,12 @@
+Había una vez una isla con una curiosa tradición: cada año se elegía un nuevo rey mediante un sorteo entre los habitantes del reino. Al finalizar su mandato, el rey era destituido y desterrado a un lejano desierto donde se le abandonaba a su suerte y nadie volvía a saber de él o ella.
+
+La mayoría de los nuevos reyes veían este "premio" como una bendición. Disfrutaban de grandes lujos, fiestas, mansiones y relajación. Desde el primer momento vivían a todo tren sin pensar en nada más que disfrutar. La gente los quería mucho porque solían ser generosos y derrochadores. Sin embargo, cuando eran destituidos y llegaban al desierto, eran completamente desgraciados. Abandonados sin apenas comida, agua o cobijo, debían soportar grandes esfuerzos y enfermedades para sobrevivir. Así pasaba, rey tras rey, durante generaciones.
+
+En una ocasión, la elegida fue una mujer sabia. Para sorpresa de todos, no comenzó su reinado con grandes festejos. En su lugar, dedicó todo un mes a pensar y planificar su mandato sin apenas salir de su palacio. 
+Tras este mes, decidió establecer un gobierno en el desierto. Organizó a la población y les atribuyó responsabilidades en agricultura, ganadería, pesca, madera, minería y leyes. También estableció viajes constantes para dotar al desierto de infraestructuras: puertos, fuentes, materiales para construir casas y granjas, y útiles para todos los oficios como arados y sierras.
+
+En menos de un año, el desierto, donde solo había penalidades, hambre y enfermedades, se transformó en un poblado que ganaba rápidamente en calidad de vida y organización gracias a las decisiones de la reina.
+
+El año transcurrió entre grandes planes, viajes y trabajo. Cuando el año terminó, como era tradición, la reina fue destituida y desterrada al desierto. A diferencia de sus antecesores, no se encontró con la nada y la miseria, sino con un próspero pueblo preparado para sobrevivir: autónomo y próspero. Tal era la prosperidad y el agradecimiento de todo el poblado que decidieron nombrarla reina del poblado por unanimidad.
+
+Gracias a su visión de futuro, su habilidad para visualizar, planificar proyectos y su esfuerzo en la educación de las nuevas generaciones, el poblado siguió creciendo y mejorando. La mejora en alimentación y sanidad permitió que el poblado superara en población y bienestar a la isla original en pocos años.
