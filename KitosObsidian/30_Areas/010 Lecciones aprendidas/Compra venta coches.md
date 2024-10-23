@@ -1,5 +1,6 @@
 Venta:
-En general parece más rentable intentar vender a particulares en lugar de hacerlo con webs (tecoprotucoche) o concesionarios 
+En general parece más rentable intentar vender a particulares en lugar de hacerlo con webs (tecoprotucoche) o concesionarios.
+Con el Yaris no lo hemos conseguido y se ha vendido a concerionario. Quizás pusimos demasiado precio o poco tiempo. Se vendió a TeCompramosTuCoche.
 
 Compra:
 - Ayvens: está dentro del concesionario Beogán Ocasión de A Grela
