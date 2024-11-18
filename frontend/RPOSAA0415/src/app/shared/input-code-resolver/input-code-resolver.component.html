@@ -1,0 +1,19 @@
+<mat-form-field class="form-field-code-resolver">
+  <mat-label>{{ label }}</mat-label>
+  <div class="control-code-resolver">
+    <input #inputField matInput type="text" [placeholder]="placeholder" class="input-code-resolver"
+      [formControl]="controlCodigo">
+    <input *ngIf="!cargando; else Cargando" matInput [formControl]="controlNombre" class="label-code-resolver">
+  </div>
+  <mat-error class="input-error" *ngIf="controlCodigo.invalid && (controlCodigo.dirty || controlCodigo.touched)">
+    {{ controlCodigo.errors?.codigo }}
+  </mat-error>
+</mat-form-field>
+<ng-template #Cargando>
+  <div class="cargando-div">
+    <span class="material-icons-cargando">
+      <mat-icon svgIcon="clock"></mat-icon>
+    </span>
+    <span class="cargando-texto">Cargando...</span>
+  </div>
+</ng-template>

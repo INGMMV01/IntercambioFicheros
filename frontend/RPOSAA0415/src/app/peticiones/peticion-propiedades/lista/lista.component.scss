@@ -1,0 +1,126 @@
+.mat-paginator-sticky {
+  bottom: 0px;
+  position: sticky;
+  z-index: 10;
+}
+
+.tabla-cabecera {
+  background-color: white;
+}
+
+// Con barra de navegación
+// .tabla-scroll {
+//   display: block;
+//   height: calc(100vh - 4rem);
+//   /* 4rem de la barra de navegación */
+//   overflow: auto;
+//   margin: 1rem 0.5rem 0.5rem 0.5rem;
+// }
+
+.tabla-scroll {
+  display: block;
+  height: calc(100vh - 3rem);
+  /* 4rem de la barra de navegación */
+  overflow: auto;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.tabla-scroll::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.tabla-scroll::-webkit-scrollbar-track {
+  background: #e1e5ec;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb {
+  background: #5c88da;
+  border-radius: 5px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4a6ca8;
+}
+
+.tabla-listado {
+  width: 100%;
+  padding-top: 0.1rem;
+
+  th,
+  td {
+    padding-left: 1rem;
+  }
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-column-clave {
+  padding-left: 2em;
+}
+
+.mat-column-valor {
+  min-width: 14em;
+    max-width: 16em;
+}
+
+.mat-column-nombre {
+  min-width: 8em;
+  max-width: 9em;
+}
+
+.mat-column-fechaDeModificacion {
+  width: 6em;
+}
+
+.mat-column-acciones {
+  width: 2em;
+}
+
+/* Ajustes generales para la visualización */
+.material-icons {
+  color: #5c88da;
+}
+
+.mat-row:hover .mat-cell {
+  background-color: whitesmoke;
+}
+
+.sin-datos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.link,
+.recurso-link {
+  text-decoration: none;
+}
+
+.mat-paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8px;
+  flex-wrap: wrap-reverse;
+  min-width: 0;
+  width: 30% !important;
+}
+
+::ng-deep .mat-paginator-outer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+::ng-deep .mat-paginator-container {
+  width: auto !important;
+}
+.detalle-link {
+  text-decoration: none;
+}

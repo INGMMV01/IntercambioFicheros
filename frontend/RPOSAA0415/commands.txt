@@ -1,0 +1,31 @@
+npm install -g @morphe/schematic-angular@latest
+
+ng new RPOSAA0415 --verbose --collection=@morphe/schematic-angular --prefix=abanca --cgdnCode=RPOSAA0415 --locale=es-ES
+
+ng g @morphe/schematic-angular:module peticiones --route=peticiones -m=app --dry-run
+ng g @morphe/schematic-angular:module peticiones/peticion-propiedades --route=:idPeticion/propiedades -m=peticiones --dry-run
+ng generate @morphe/schematic-angular:component peticiones/peticion-propiedades/filtro --skip-tests --dry-run
+ng generate @morphe/schematic-angular:component peticiones/peticion-propiedades/lista --skip-tests --dry-run
+ng g @morphe/schematic-angular:module peticiones/peticion-propiedades/detalle --route=:idPropiedad -m=peticiones/peticion-propiedades --dry-run
+ng g @morphe/schematic-angular:module peticiones/peticion-propiedades/nuevo --route=nuevo -m=peticiones/peticion-propiedades --dry-run
+
+ng g @morphe/schematic-angular:module ejemplo --route=ejemplos -m=app --dry-run
+
+ng g @morphe/schematic-angular:component shared/cargando --skip-tests --dry-run
+ng g @morphe/schematic-angular:component shared/input-code-resolver --skip-tests --dry-run
+ng g @morphe/schematic-angular:component shared/validacion-snackbar --skip-tests --dry-run
+
+ng g @morphe/schematic-angular:service services/propiedad-peticion/propiedades-peticion --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/estado-busqueda-propiedades-peticion --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/filtro-propiedades-peticion --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/layout-medidas --skip-tests --dry-run
+
+ng g @morphe/schematic-angular:service services/peticion/peticiones --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/estados/estado-posible --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/estados/estado --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/propiedad-peticion-estado --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/propiedad-peticion-editable --skip-tests --dry-run
+ng g @morphe/schematic-angular:service services/propiedad-peticion/tipo-propiedad-peticion --skip-tests --dry-run
+
+
+

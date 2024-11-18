@@ -1,0 +1,73 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules/**": true,
+    "dist/**": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.detectIndentation": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.options": {
+    "extensions": [
+      ".ts",
+      ".html"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "xliffSync.baseFile": "messages.xlf",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "htmlhint.options": {
+    "doctype-first": false,
+    "attr-lowercase": [
+      "*ngIf",
+      "*ngFor",
+      "fxLayout",
+      "fxLayoutGap",
+      "fxLayoutAlign",
+      "fxFlex",
+      "fxFlexOffset",
+      "formGroup",
+      "formControlName",
+      "[formGroup]",
+      "routerLink",
+      "routerLinkActive",
+      "matInput",
+      "[dataSource]",
+      "matColumnDef",
+      "*matCellDef",
+      "*matHeaderCellDef",
+      "*matHeaderRowDef",
+      "matRowDef",
+      "*matRowDef",
+      "matSort",
+      "[pageSize]",
+      "[pageIndex]",
+      "[pageSizeOptions]",
+      "[(ngModel)]",
+      "(ngModelChange)"
+    ]
+  }
+}

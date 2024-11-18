@@ -1,0 +1,29 @@
+.material-icons {
+  color: #5c88da;
+}
+
+.material-icons-cargando {
+  color: #5c88da;
+}
+
+.cargando-div {
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  padding: 3em 3em 3em 3em;
+}
+
+.cargando-texto {
+  font-size: small;
+  color: black;
+  opacity: 0.7;
+  padding-left: 0.5em;
+  padding-top: 0.4em;
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    CGDN - Gestión de la configuración
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=100" />
+  <meta http-equiv="referrer" content="no-referrer" />
+  <link rel="icon" type="image/svg+xml" href="http://cdn.abanca.io/assets/logos/abanca-mini.svg">
+  <style id="antiClickjack">
+    body {
+      display: none !important;
+    }
+  </style>
+  <script type="text/javascript">
+    var allowedDomains = ['http://localhost', 'http://localhost:4200', 'http://dcaplicaciones', 'http://tcaplicaciones', 'http://ecaplicaciones'];
+
+    if (self !== top || !allowedDomains.includes(document.referrer)) {
+      var antiClickjack = document.getElementById("antiClickjack");
+      antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+      top.location.href = encodeURIComponent(self.location.href)
+    }
+  </script>
+</head>
+
+<body>
+  <abanca-root></abanca-root>
+</body>
+
+</html>

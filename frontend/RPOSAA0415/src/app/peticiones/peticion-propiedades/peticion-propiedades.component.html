@@ -1,0 +1,8 @@
+
+<abanca-cargando [valorLoading]="referring" msg="Cargando ítem..."></abanca-cargando>
+<div *ngIf="!referring" class="contenedor-filtro-lista">
+  <abanca-filtro (referringChange)="handleReferringChange($event)">
+  </abanca-filtro>
+  <abanca-lista>
+  </abanca-lista>
+</div>
