@@ -197,4 +197,9 @@ Por ese motivo las recomendaciones generales no son adecuadas. No sabes cuál es
 Lo más importante es establecer un juego propio e intentar respetarlo. Para ello se recomienda algún tipo de declaración de intenciones, por ejemplo: 
 "Soy un inversor pasivo y optimista a largo plazo porque creo que el mundo está en continua mejora y crecimiento. El ruido del mercado y los vaivenes momentáneos no deberían afectarme"
 
-## Capítulo 17: 
+## Capítulo 17: La seducción del pesimismo
+
+
+
+
+Ver también: https://santiagoallamand.com/todos-los-artculos-y-resmenes/artculos-y-resmenes/la-psicologa-del-dinero-de-morgan-housel
