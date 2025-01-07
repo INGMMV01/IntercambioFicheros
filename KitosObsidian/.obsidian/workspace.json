@@ -13,48 +13,42 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40_Recursos/Libros/La psicología del dinero.md",
+                "file": "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Maíz. San Tomé"
             }
           },
           {
-            "id": "aaab9d1120016df9",
+            "id": "e7fb556a8579ea0f",
             "type": "leaf",
             "state": {
               "type": "release-notes",
               "state": {
-                "currentVersion": "1.6.3"
-              }
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
             }
           },
           {
-            "id": "131655b47940b634",
+            "id": "ef7a4a7e9d816b66",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_Inbox/cartera Golden Buterflay.md",
+                "file": "40_Recursos/Libros/La psicología del dinero.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "f0959d6de94f503a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10_Inbox/cartera Golden Buterflay.md",
-                "mode": "source",
-                "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "La psicología del dinero"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -74,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -89,7 +85,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
             }
           },
           {
@@ -97,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
             }
           }
         ]
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10_Inbox/cartera Golden Buterflay.md",
+                "file": "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Maíz. San Tomé"
             }
           },
           {
@@ -137,10 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_Inbox/cartera Golden Buterflay.md",
+                "file": "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Maíz. San Tomé"
             }
           },
           {
@@ -151,7 +155,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
             }
           },
           {
@@ -160,8 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_Inbox/cartera Golden Buterflay.md"
-              }
+                "file": "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md"
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Maíz. San Tomé"
             }
           }
         ],
@@ -181,43 +189,43 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9942e9a3a39d0cf7",
+  "active": "ef7a4a7e9d816b66",
   "lastOpenFiles": [
+    "30_Areas/030_Ocio_Cultura/Descargas.md",
+    "30_Areas/30_Ocio_Cultura/Descargas.md",
+    "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md",
+    "10_Inbox/40 lecciones a los 40.md",
+    "30_Areas/030_Ocio_Cultura/Libros/Repositorio libros.md",
+    "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
+    "30_Areas/030_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
+    "30_Areas/030_Ocio_Cultura/Libros/desktop.ini",
+    "30_Areas/030_Ocio_Cultura/Deporte/Nutrición.md",
+    "30_Areas/030_Ocio_Cultura/Deporte/desktop.ini",
+    "30_Areas/030_Ocio_Cultura/Deporte/Conceptos deportivos.md",
+    "30_Areas/030_Ocio_Cultura/Cine/Series.md",
+    "30_Areas/030_Ocio_Cultura/Cine/Películas.md",
+    "30_Areas/030_Ocio_Cultura/Cine/desktop.ini",
+    "30_Areas/030_Ocio_Cultura/Libros",
+    "30_Areas/030_Ocio_Cultura/desktop.ini",
+    "30_Areas/030_Ocio_Cultura/Deporte",
+    "30_Areas/030_Ocio_Cultura/Cine",
+    "30_Areas/030_Ocio_Cultura",
+    "30_Areas/010 Lecciones aprendidas/Compra venta coches.md",
+    "30_Areas/010 Lecciones aprendidas",
+    "40_Recursos/Libros/La psicología del dinero.md",
+    "40_Recursos/Formación/Curso habilidades de Comunicación/Habilidades de comunicación.md",
+    "40_Recursos/Formación/Curso habilidades de Comunicación",
+    "10_Inbox/La reina previsora.md",
     "10_Inbox/cartera Golden Buterflay.md",
     "40_Recursos/Formación/Angular 13/Angular 13.md",
-    "40_Recursos/Libros/La psicología del dinero.md",
-    "40_Recursos/Formación/Angular 13/TypeScript.pdf",
-    "40_Recursos/Formación/Angular 13/Presentación Curso Angular 13.pdf",
-    "40_Recursos/Formación/Angular 13",
     "10_Inbox/lectura sobre ChatGPT.md",
     "40_Recursos/Formación/Curso TDD/Material Curso.md",
     "40_Recursos/Formación/Cursos.md",
     "10_Inbox/readme.md",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/resource-types/desktop.ini",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/resource-types/coleccion.raml",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/types/desktop.ini",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/types/documentos.raml",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/libraries/desktop.ini",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Raml/libraries/custom.library.raml",
-    "40_Recursos/Formación/Curso Gobierno APIs/Ejercicios/Swagger/desktop.ini",
     "40_Recursos/Formación/Curso Gobierno APIs/5 notas Testing.md",
     "40_Recursos/Formación/Curso Gobierno APIs/4 notas Swagger.md",
     "40_Recursos/Formación/Curso Gobierno APIs/3 Notas RAML Diseño.md",
     "40_Recursos/Formación/Curso Gobierno APIs/2. notas gobierno de API.md",
-    "40_Recursos/Formación/Curso Gobierno APIs/1 notas filosofía API.md",
-    "40_Recursos/Formación/Curso Gobierno APIs/0 Curso APIs - Índice.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 8.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 7.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 6.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 5.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 4.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas tema 3.md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Notas Curso Usabilidad y UX (temas 1 y 2).md",
-    "40_Recursos/Formación/Curso Usabilidad y UX/Curso Usabilidad y UX - indice.md",
-    "30_Areas/30_Ocio_Cultura/Descargas.md",
-    "30_Areas/30_Ocio_Cultura/Libros/Repositorio libros.md",
-    "30_Areas/30_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
-    "30_Areas/30_Ocio_Cultura/Libros/Libros a leer.md",
-    "30_Areas/30_Ocio_Cultura/Cine/Películas.md"
+    "40_Recursos/Formación/Curso Gobierno APIs/1 notas filosofía API.md"
   ]
 }
