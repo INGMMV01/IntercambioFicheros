@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20_Proyectos/010 Hábitos y propósitos/01 Lectura.md",
+                "file": "30_Areas/030_Ocio_Cultura/Descargas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 Lectura"
+              "title": "Descargas"
             }
           },
           {
@@ -48,8 +48,23 @@
               "icon": "lucide-file",
               "title": "La psicología del dinero"
             }
+          },
+          {
+            "id": "9bc8aa2f2f0c5455",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30_Areas/020_Economía/Checklist trading.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Checklist trading"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -80,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cita",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,7 +193,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,19 +206,25 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "77d2748029cd585b",
+  "active": "9bc8aa2f2f0c5455",
   "lastOpenFiles": [
-    "20_Proyectos/010 Hábitos y propósitos/02 Grease the grove.md",
+    "40_Recursos/Libros/La psicología del dinero.md",
+    "30_Areas/020_Economía/Checklist trading.md",
+    "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
+    "30_Areas/030_Ocio_Cultura/Descargas.md",
+    "10_Inbox/Sin título.md",
+    "10_Inbox/40 lecciones a los 40.md",
+    "10_Inbox/cartera Golden Buterflay.md",
+    "10_Inbox/La reina previsora.md",
+    "10_Inbox/lectura sobre ChatGPT.md",
+    "40_Recursos/Formación/Cursos.md",
     "20_Proyectos/010 Hábitos y propósitos/01 Lectura.md",
+    "20_Proyectos/010 Hábitos y propósitos/02 Grease the grove.md",
     "20_Proyectos/010 Hábitos y propósitos/00 Plantilla definición hábitos propósitos.md",
     "20_Proyectos/010 Hábitos y propósitos/Sin título.md",
-    "40_Recursos/Libros/La psicología del dinero.md",
     "20_Proyectos/010 Hábitos y propósitos",
-    "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md",
-    "30_Areas/030_Ocio_Cultura/Descargas.md",
     "30_Areas/30_Ocio_Cultura/Descargas.md",
-    "10_Inbox/40 lecciones a los 40.md",
     "30_Areas/030_Ocio_Cultura/Libros/Repositorio libros.md",
     "30_Areas/030_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
     "30_Areas/030_Ocio_Cultura/Libros/desktop.ini",
@@ -220,13 +242,7 @@
     "30_Areas/010 Lecciones aprendidas/Compra venta coches.md",
     "30_Areas/010 Lecciones aprendidas",
     "40_Recursos/Formación/Curso habilidades de Comunicación/Habilidades de comunicación.md",
-    "10_Inbox/La reina previsora.md",
-    "10_Inbox/cartera Golden Buterflay.md",
     "40_Recursos/Formación/Angular 13/Angular 13.md",
-    "10_Inbox/lectura sobre ChatGPT.md",
-    "40_Recursos/Formación/Curso TDD/Material Curso.md",
-    "40_Recursos/Formación/Cursos.md",
-    "10_Inbox/readme.md",
-    "40_Recursos/Formación/Curso Gobierno APIs/5 notas Testing.md"
+    "40_Recursos/Formación/Curso TDD/Material Curso.md"
   ]
 }

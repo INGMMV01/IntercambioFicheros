@@ -35,3 +35,7 @@ freelibros
 
 - Dominio púbico
 https://www.mundodeportivo.com/urbantecno/tutoriales/libros-de-dominio-publico-como-descargarlos-gratis
+
+https://www-genbeta-com.cdn.ampproject.org/v/s/www.genbeta.com/actualidad/proyecto-gutenberg-tiene-5-000-audiolibros-nuevos-que-puedes-escuchar-gratis-ha-hecho-inteligencia-artificial/amp?amp_gsa=1&amp_js_v=a9&usqp=mq331AQGsAEggAID#amp_tf=De%20%251%24s&aoh=16956724373830&csi=1&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.genbeta.com%2Factualidad%2Fproyecto-gutenberg-tiene-5-000-audiolibros-nuevos-que-puedes-escuchar-gratis-ha-hecho-inteligencia-artificial
+
+https://www.20minutos.es/tecnologia/aplicaciones/mejores-sitios-web-gratis-descargar-libros-electronicos-legal-5074694/
