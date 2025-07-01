@@ -101,3 +101,15 @@ Los cuatro acuerdos de Miguel Ruiz, basados en la antigua sabiduría tolteca, so
     
 
 Estos cuatro acuerdos, practicados de manera constante, buscan romper con los "acuerdos" limitantes que hemos internalizado desde la infancia a través de la domesticación y la sociedad, permitiéndonos vivir una vida más plena, consciente y feliz.
+
+
+
+### Actos lingüísticos
+- Afirmaciones: La persona afirma o refiere un hecho. El hablante describe el mundo
+- Declaraciones: declara un nuevo contexto. El hablante genera un nuevo mundo o realidad
+- Peticiones
+- Ofertas
+- Juicios o valoraciones: interpretación
+
+### Comunicación asertiva
+- Expresar una idea de forma amable pero firme: Firme en cuanto a defender MI opinión pero sin imponerla ni supeditarla a la de otros.
