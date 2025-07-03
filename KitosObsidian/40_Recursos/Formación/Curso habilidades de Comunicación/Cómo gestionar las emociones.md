@@ -1,0 +1,16 @@
+- revisión de las emociones básicas: películas 'Del revés'
+- gestión:
+  - reconocer emociones propias y ajenas
+  - adaptarse a los cambios
+  - compresión de los sentimientos de los demás, manejar relaciones y tener influencia
+    - pasiva
+    - agresiva
+    - manipuladora
+    - asertiva
+- Brújula emocional
+	- emociones más visibles: alegría, ira
+	- emociones más íntimas: miedo, tristeza
+- Círculo vicioso
+	- síntomas físicos: pecho, estómago
+	- síntomas emocionales: preocupación, ansiedad
+	- síntomas conductuales: llorar, gritar
