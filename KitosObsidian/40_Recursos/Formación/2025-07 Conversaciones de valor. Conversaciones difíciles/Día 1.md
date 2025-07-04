@@ -102,6 +102,7 @@ Los cuatro acuerdos de Miguel Ruiz, basados en la antigua sabiduría tolteca, so
 
 Estos cuatro acuerdos, practicados de manera constante, buscan romper con los "acuerdos" limitantes que hemos internalizado desde la infancia a través de la domesticación y la sociedad, permitiéndonos vivir una vida más plena, consciente y feliz.
 
+#### "PNL para dummies" 
 
 
 ### Actos lingüísticos

@@ -30,3 +30,6 @@
 		- Desactivar: sacar comportamientos que restan valor y ponen obstáculos
 		- Mantener: comportamientos que están, aportan y deben conservarse
 		- Mejorar: comportamientos que ya están pero deben mejorarse
+	- cómo hacer
+		- preparar ejemplos específicos
+		- cómo lo ves tú
