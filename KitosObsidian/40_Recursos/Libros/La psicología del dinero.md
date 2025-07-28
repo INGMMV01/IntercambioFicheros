@@ -199,6 +199,9 @@ Lo más importante es establecer un juego propio e intentar respetarlo. Para ell
 
 ## Capítulo 17: La seducción del pesimismo
 
+Instintivamente estamos programados para el pesimismo. Si preguntamos a la mayoría de personas te dirán que tienen una percepción del mundo mucho peor de lo que en realidad es o de lo que era en otras épocas.
+El pesimismo es una herramienta de protección evolutiva y llama nuestra atención de forma exagerada y hace que pongamos mucha más atención a las noticias sobre riesgos o catástrofes que sobre noticias positivas o de mejora.
+En realidad, el mundo en general, ha ido mejorando sensiblemente con el paso del tiempo y sigue mejorando.
 
 
 

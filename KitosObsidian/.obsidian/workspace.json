@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "30_Areas/020_Economía/Checklist trading.md",
+                "file": "40_Recursos/Libros/La psicología del dinero.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Checklist trading"
+              "title": "La psicología del dinero"
             }
           }
         ],
@@ -83,7 +83,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -208,8 +209,8 @@
   },
   "active": "9bc8aa2f2f0c5455",
   "lastOpenFiles": [
-    "40_Recursos/Libros/La psicología del dinero.md",
     "30_Areas/020_Economía/Checklist trading.md",
+    "40_Recursos/Libros/La psicología del dinero.md",
     "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/030_Ocio_Cultura/Descargas.md",
     "10_Inbox/Sin título.md",
