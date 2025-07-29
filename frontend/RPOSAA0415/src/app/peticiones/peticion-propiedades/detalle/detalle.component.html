@@ -41,6 +41,7 @@
       <mat-option *ngFor="let estado of estados" [value]="estado.attributes.codigoDeEstado.toString()">
         {{ estado.attributes.descripcion }}
       </mat-option>
+      <mat-option value="">Sin estado definido(null)</mat-option>
     </mat-select>
   </mat-form-field>
 
