@@ -53,7 +53,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
                 case 'nombre':
                     return (item.attributes.nombre || '').toLowerCase();
                 case 'valor':
-                    return (item.attributes.valor || '').toLowerCase();
+                    return (item.attributes.valor ?? '').toLowerCase();
                 case 'fechaDeModificacion': {
                     const dateValue: Date | null = item.attributes[property];
 
