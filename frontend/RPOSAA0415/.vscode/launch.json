@@ -43,6 +43,15 @@
       "args": [
         "${workspaceFolder}/e2e/protractor.conf.js"
       ]
+    },
+    {
+      "name": "Attach Chrome",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "open:chrome-debug",
+      "timeout": 60000
     }
   ]
 }

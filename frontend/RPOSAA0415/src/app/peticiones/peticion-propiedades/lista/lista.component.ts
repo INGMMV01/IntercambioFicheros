@@ -147,7 +147,7 @@ export class ListaComponent implements OnInit, AfterViewInit {
         };
     }
 
-    public resolverEstado$(propiedad: IJsonApiData<IPropiedadPeticionResponseAttributes>): Observable<string> {
+    public resolverEstado$(propiedad: IJsonApiData<IPropiedadPeticionResponseAttributes>): Observable<string | null | undefined> {
         return this.propiedadesEstadoService.resuelvePropiedadEstado$(propiedad.attributes);
     }
 

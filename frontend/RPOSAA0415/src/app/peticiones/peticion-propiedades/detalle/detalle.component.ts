@@ -32,6 +32,8 @@ export class DetalleComponent {
     esEditable = true;
     estados: IJsonApiData<IEstadosPosiblesDeUnaPeticionResponseAttributes>[] = [];
 
+    readonly VALOR_NULL = '__NULL__';
+
     constructor(
         private _ngZone: NgZone,
         private activatedRoute: ActivatedRoute,
@@ -59,13 +61,29 @@ export class DetalleComponent {
             }
         );
 
-        propiedadPeticionService.getEntity$(this.idPeticion, this.idPropiedad).subscribe((propiedad) => {
-            this.esPropiedadEstado = this.propiedadesEstadoService.esPropiedadEstado(propiedad);
-            this.esEditable = this.propiedadPeticionEditableService.esPropiedadEditable(propiedad);
-            this.formulario.get('clave')?.setValue(propiedad.clave);
-            this.formulario.get('nombre')?.setValue(propiedad.nombre);
-            this.formulario.get('valor')?.setValue(propiedad.valor);
-        });
+        this.propiedadPeticionService
+            .getEntity$(this.idPeticion, this.idPropiedad)
+            .subscribe((propiedad) => {
+                this.esPropiedadEstado = this.propiedadesEstadoService.esPropiedadEstado(propiedad);
+                this.esEditable = this.propiedadPeticionEditableService.esPropiedadEditable(propiedad);
+
+                this.formulario.get('clave')?.setValue(propiedad.clave);
+                this.formulario.get('nombre')?.setValue(propiedad.nombre);
+
+                const raw = propiedad.valor;
+                let valorLimpio: string | null;
+
+                if (raw === null || raw === undefined) {
+                    valorLimpio = this.VALOR_NULL;
+                } else if (raw === '') {
+                    valorLimpio = '';
+                } else {
+                    valorLimpio = raw.toString();
+                }
+
+                this.formulario.get('valor')?.setValue(valorLimpio);
+            });
+
     }
 
     public get cargando(): boolean {
@@ -96,6 +114,10 @@ export class DetalleComponent {
         request.clave = this.formulario.get('clave')?.value;
         request.nombre = this.formulario.get('nombre')?.value;
         request.valor = this.formulario.get('valor')?.value;
+
+        if (request.valor === this.VALOR_NULL) {
+            request.valor = '';
+        }
 
         const value$ = this.propiedadPeticionService.update$(this.idPeticion, this.idPropiedad, request);
         // eslint-disable-next-line  @typescript-eslint/no-explicit-any

@@ -3,7 +3,7 @@ export interface IPropiedadPeticionResponseAttributes {
 
     nombre: string;
 
-    valor: string;
+    valor?: string | null;
 
     fechaDeModificacion: Date;
 }

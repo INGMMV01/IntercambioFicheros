@@ -29,21 +29,29 @@
   <mat-form-field class="formularioValor" *ngIf="!esPropiedadEstado">
     <mat-label>Valor</mat-label>
     <!-- <input #nombre matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable"> -->
-    <textarea #autosize="cdkTextareaAutosize" matInput formControlName="valor" placeholder="Valor" [readonly]="!esEditable" cdkTextareaAutosize
-      rows="1" cols="20"></textarea>
+    <textarea #autosize="cdkTextareaAutosize" matInput formControlName="valor" placeholder="Valor"
+      [readonly]="!esEditable" cdkTextareaAutosize rows="1" cols="20"></textarea>
   </mat-form-field>
 
   <abanca-cargando [valorLoading]="cargandoEstadosPosibles" *ngIf="esPropiedadEstado"></abanca-cargando>
   <mat-form-field class="formularioValorEstado" *ngIf="esPropiedadEstado && !cargandoEstadosPosibles">
     <mat-label>Valor</mat-label>
     <mat-select formControlName="valor" [disabled]="!esEditable">
-      <mat-option value="">{{ '-- Selecciona un valor --' }}</mat-option>
+      <!-- Opción placeholder: cadena vacía -->
+      <mat-option [value]="''">
+        -- Selecciona un valor --
+      </mat-option>
+      <!-- Tus opciones habituales -->
       <mat-option *ngFor="let estado of estados" [value]="estado.attributes.codigoDeEstado.toString()">
         {{ estado.attributes.descripcion }}
       </mat-option>
-      <mat-option value="">Sin estado definido(null)</mat-option>
+      <mat-option [value]=VALOR_NULL>
+        Sin estado definido (null)
+      </mat-option>
     </mat-select>
   </mat-form-field>
+
+
 
   <div class="error-summary">
     <div *ngIf="formulario.invalid && formulario.get('clave')?.touched && formulario.get('clave')?.errors?.required"

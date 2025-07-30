@@ -37,7 +37,7 @@ export class PropiedadPeticionEstadoService {
         return esEstado;
     }
 
-    resuelvePropiedadEstado$(propiedadPeticion: IPropiedadPeticionResponseAttributes): Observable<string> {
+    resuelvePropiedadEstado$(propiedadPeticion: IPropiedadPeticionResponseAttributes): Observable<string | null | undefined> {
         // Comprueba si la clave está en clavesDeEstados
         if (this.esPropiedadEstado(propiedadPeticion)) {
             return this.getEstados$().pipe(

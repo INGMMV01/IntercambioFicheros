@@ -53,6 +53,8 @@
   display: flex;
   flex-wrap: wrap;
   /* Permite que los filtros se ajusten según el tamaño disponible */
+  padding: 10px; /* Agrega padding para que no corte los bordes */
+  margin-left: -10px; /* Corrige el corte del borde izquierdo */
 }
 
 .acciones {

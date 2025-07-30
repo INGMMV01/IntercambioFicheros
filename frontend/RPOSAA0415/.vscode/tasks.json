@@ -33,5 +33,16 @@
         }
       }
     },
+    {
+      // Abre Chrome con los flags de depuración
+      "label": "open:chrome-debug",
+      "type": "process",
+      "command": "${env:ProgramFiles}\\Google\\Chrome\\Application\\chrome.exe",
+      "args": [
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${env:TEMP}\\chrome-debug-test",
+        "http://localhost:4200"
+      ],
+    },
   ]
 }
