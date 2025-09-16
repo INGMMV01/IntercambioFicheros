@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -e
+
+###############################################################################
+# 1 ▸ Repos de referencia (solo lectura; contexto para Codex)
+###############################################################################
+git clone --depth 1 https://${GH_TOKEN}@github.com/ingmmv01/RPOSAA0401.git  refs/RPOSAA0401
+git clone --depth 1 https://${GH_TOKEN}@github.com/ingmmv01/morphe-common.git refs/morphe-common
+git clone --depth 1 https://${GH_TOKEN}@github.com/ingmmv01/morphe2-eslint.git refs/morphe2-eslint
+
+###############################################################################
+# 2 ▸ npm moderno
+###############################################################################
+npm install -g --silent npm@9
+hash -r
+
+###############################################################################
+# 3 ▸ Esconder package.json / lockfile para que npm NO los lea
+###############################################################################
+[ -f package.json ]        && mv package.json        package.json.bak
+[ -f package-lock.json ]   && mv package-lock.json   package-lock.json.bak
+
+###############################################################################
+# 4 ▸ Instalar SÓLO la tool-chain que necesita ESLint
+###############################################################################
+npm install --no-save --ignore-scripts --package-lock=false \
+  --legacy-peer-deps --no-audit --no-fund \
+  --registry=https://registry.npmjs.org/ \
+  eslint@7.32.0 \
+  typescript@4.3.5 \
+  @angular-eslint/eslint-plugin@12.7.0 \
+  @angular-eslint/eslint-plugin-template@12.7.0 \
+  @angular-eslint/template-parser@12.7.0 \
+  @typescript-eslint/parser@4.28.2 \
+  eslint-plugin-import@2.27.5 \
+  eslint-plugin-sonarjs@0.12.0 \
+  @typescript-eslint/eslint-plugin@4.28.2 || true   # si algo menor falla, seguimos
+
+###############################################################################
+# 5 ▸ Restaurar los ficheros originales
+###############################################################################
+[ -f package.json.bak ]        && mv package.json.bak        package.json
+[ -f package-lock.json.bak ]   && mv package-lock.json.bak   package-lock.json
+
+###############################################################################
+# 6 ▸ Stub para la configuración privada de ESLint
+###############################################################################
+mkdir -p node_modules/@morphe/eslint-config
+cat > node_modules/@morphe/eslint-config/package.json <<'PKG'
+{ "name": "@morphe/eslint-config", "version": "0.0.0", "main": "index.js" }
+PKG
+echo 'module.exports = {};' > node_modules/@morphe/eslint-config/index.js
