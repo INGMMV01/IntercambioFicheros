@@ -9,7 +9,8 @@
 		4. RPOSAA0415
 	2. Proceso (para cada uno de ellos):
 		1. se clona a local desde Abanca Gitlab
-		2. se crea un segundo remote contra Github, se sube a este y se elimina el de gitlab
+		2. crear repositorio privado en Github
+		3. se crea un segundo remote contra Github, se sube a este y se elimina el de gitlab
 			1. git remote add github https://github.com/INGMMV01/morphe-common.git
 			2. git remote -v
 			3. git remote remove origin (esto no se hace para el repo de trabajo: RPOSAA0415)
