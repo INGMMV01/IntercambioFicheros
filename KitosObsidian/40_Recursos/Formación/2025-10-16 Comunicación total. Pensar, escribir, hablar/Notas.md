@@ -13,12 +13,11 @@
 Wuolah: apuntes de clase escritos en listas
 
 Cómo pensar mejor:
-- habla contigo mismo y habla
-- habla con otra persona
+- habla contigo mismo y habla con otra persona
 - pensar en movimiento
-- expresar ideas o contar historias en tercera persona: pon la idea o el problema en boca de otra persona y
+- expresar ideas o contar historias en tercera persona: pon la idea o el problema en boca de otra persona 
 - anota tus ideas: Las ideas vienen y se van: Libro: Construyendo un segundo cerebro (Tiago Forte)
-- Usa ChatCPT: antes de leer un libro pídele que haga un resumen "Resume Sapiens en 10 ideas clave"
+- Usa ChatGPT: antes de leer un libro pídele que haga un resumen "Resume Sapiens en 10 ideas clave"
 - Hechos: resumen cronológico permite entender mejor los hechos.
 - usar preguntas para captar la atención
 - Contar historias personales 
@@ -31,13 +30,6 @@ Método Toyota:
 - todo se puede desgranar con cinco preguntas empezando por 'por qué...?'
 
 #### Discurso de argumentación: ####
-- 
-- presentación problema
-- recomendación
-	- referencias ajenas: universidad, OCU
-	- experiencia personal
-	- precio
-- llamada a la acción
 
 Estructura 
 - gancho: experiencia propia
@@ -49,7 +41,12 @@ Estructura
 - LAA: llamada a la acción: oferta y compra 
 
 Prompt IA:
-Dame contenidos para una charla de 3 minutos siguiendo este esquema: 1. El tema de mi charla es (....). 2. Dame tres palabras clave que lo resuman. 3. Desarrolla el primer argumento con datos, el segundo con una opinión de un líder de opinión, y el tercero con una experiencia personal inventada. 4. Resume y repite el mensaje. 5. Dame una llamada a la acción.
+Dame contenidos para una charla de 3 minutos siguiendo este esquema: 
+1. El tema de mi charla es (....). 
+2. Dame tres palabras clave que lo resuman. 
+3. Desarrolla el primer argumento con datos, el segundo con una opinión de un líder de opinión, y el tercero con una experiencia personal inventada. 
+4. Resume y repite el mensaje. 
+5. Dame una llamada a la acción.
 
 Y ahora dame una historia de alguien llamado María o Juan que represente el tema a través de un relato. 80 palabras
 
