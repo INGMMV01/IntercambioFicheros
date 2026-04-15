@@ -50,17 +50,13 @@
             }
           },
           {
-            "id": "9bc8aa2f2f0c5455",
+            "id": "e6511c806c6c80a9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40_Recursos/Libros/La psicología del dinero.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "La psicología del dinero"
+              "title": "Nueva pestaña"
             }
           }
         ],
@@ -171,7 +167,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Etiquetas"
@@ -183,10 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "30_Areas/010 Lecciones aprendidas/Maíz. San Tomé.md"
+                "file": "Sin título.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Maíz. San Tomé"
+              "title": "Esquema de Sin título"
             }
           }
         ],
@@ -199,18 +200,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Crear nueva base": false,
       "canvas:Crear nuevo lienzo": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": true,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "9bc8aa2f2f0c5455",
+  "active": "9942e9a3a39d0cf7",
   "lastOpenFiles": [
-    "30_Areas/020_Economía/Checklist trading.md",
+    "Sin título 5.base",
+    "Sin título 4.base",
+    "Sin título 3.base",
+    "Sin título 2.base",
+    "Sin título 1.base",
+    "Sin título 1.md",
+    "Sin título.base",
+    "Sin título.md",
+    "Excalidraw/Drawing 2026-04-14 23.47.51.excalidraw.md",
     "40_Recursos/Libros/La psicología del dinero.md",
+    "Excalidraw",
+    "Sin título.canvas",
+    "Sin nombre",
+    "2026-04-11.md",
+    "30_Areas/020_Economía/Checklist trading.md",
     "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/030_Ocio_Cultura/Descargas.md",
     "10_Inbox/Sin título.md",
@@ -230,20 +246,7 @@
     "30_Areas/030_Ocio_Cultura/Libros/Fitness revolucionario. Lecciones ancestrales para una salud salvaje.md",
     "30_Areas/030_Ocio_Cultura/Libros/desktop.ini",
     "30_Areas/030_Ocio_Cultura/Deporte/Nutrición.md",
-    "30_Areas/030_Ocio_Cultura/Deporte/desktop.ini",
     "30_Areas/030_Ocio_Cultura/Deporte/Conceptos deportivos.md",
-    "30_Areas/030_Ocio_Cultura/Cine/Series.md",
-    "30_Areas/030_Ocio_Cultura/Cine/Películas.md",
-    "30_Areas/030_Ocio_Cultura/Cine/desktop.ini",
-    "30_Areas/030_Ocio_Cultura/Libros",
-    "30_Areas/030_Ocio_Cultura/desktop.ini",
-    "30_Areas/030_Ocio_Cultura/Deporte",
-    "30_Areas/030_Ocio_Cultura/Cine",
-    "30_Areas/030_Ocio_Cultura",
-    "30_Areas/010 Lecciones aprendidas/Compra venta coches.md",
-    "30_Areas/010 Lecciones aprendidas",
-    "40_Recursos/Formación/Curso habilidades de Comunicación/Habilidades de comunicación.md",
-    "40_Recursos/Formación/Angular 13/Angular 13.md",
-    "40_Recursos/Formación/Curso TDD/Material Curso.md"
+    "30_Areas/030_Ocio_Cultura/Cine/Series.md"
   ]
 }
