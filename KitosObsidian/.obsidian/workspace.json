@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40_Recursos/Formación/2026-06-11 Curso IA/Notas.md",
+                "file": "Diario/2026-06-27.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notas"
+              "title": "2026-06-27"
             }
           }
         ],
@@ -188,9 +188,19 @@
   },
   "active": "383fba5eff874ebe",
   "lastOpenFiles": [
+    "Diario/2026-06-28.md",
+    "Diario/2026-06-29.md",
+    "Diario/2026-06-27.md",
+    "Diario/2026-06-26.md",
+    "Diario/2026-06-25.md",
+    "Diario/2026-06-24.md",
+    "Diario/2026-06-23.md",
+    "Diario/2026-06-22.md",
+    "Diario/Sin título.md",
+    "40_Recursos/Formación/2026-06-11 Curso IA/Notas.md",
+    "Diario",
     "40_Recursos/Formación/2026-06-11 Curso IA",
     "10_Inbox/ClaudeCode/lecciones aprendidas.md",
-    "40_Recursos/Formación/2026-06-11 Curso IA/Notas.md",
     "10_Inbox/Charla Intro Claude Code.md",
     "10_Inbox/ClaudeCode/primer proyecto Claude Code.md",
     "10_Inbox/ClaudeCode/Charla Intro Claude Code.md",
@@ -208,7 +218,6 @@
     "Sin título 2.base",
     "Sin título 1.base",
     "Sin título 1.md",
-    "Sin título.base",
     "Excalidraw/Drawing 2026-04-14 23.47.51.excalidraw.md",
     "Sin título.canvas",
     "2026-04-11.md",
@@ -216,14 +225,6 @@
     "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/030_Ocio_Cultura/Descargas.md",
     "10_Inbox/Sin título.md",
-    "10_Inbox/40 lecciones a los 40.md",
-    "10_Inbox/cartera Golden Buterflay.md",
-    "10_Inbox/La reina previsora.md",
-    "10_Inbox/lectura sobre ChatGPT.md",
-    "40_Recursos/Formación/Cursos.md",
-    "20_Proyectos/010 Hábitos y propósitos/01 Lectura.md",
-    "20_Proyectos/010 Hábitos y propósitos/02 Grease the grove.md",
-    "20_Proyectos/010 Hábitos y propósitos/00 Plantilla definición hábitos propósitos.md",
-    "20_Proyectos/010 Hábitos y propósitos/Sin título.md"
+    "10_Inbox/40 lecciones a los 40.md"
   ]
 }
