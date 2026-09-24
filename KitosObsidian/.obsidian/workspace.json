@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diario/2026-06-27.md",
+                "file": "40_Recursos/Formación/2026-06-11 Curso IA/Notas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-27"
+              "title": "Notas"
             }
           }
         ],
@@ -56,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -188,9 +190,11 @@
   },
   "active": "383fba5eff874ebe",
   "lastOpenFiles": [
+    "40_Recursos/Formación/Angular 20/Angular 20.md",
+    "Diario/2026-06-27.md",
+    "40_Recursos/Formación/Angular 20",
     "Diario/2026-06-28.md",
     "Diario/2026-06-29.md",
-    "Diario/2026-06-27.md",
     "Diario/2026-06-26.md",
     "Diario/2026-06-25.md",
     "Diario/2026-06-24.md",
@@ -216,7 +220,6 @@
     "Sin título 4.base",
     "Sin título 3.base",
     "Sin título 2.base",
-    "Sin título 1.base",
     "Sin título 1.md",
     "Excalidraw/Drawing 2026-04-14 23.47.51.excalidraw.md",
     "Sin título.canvas",
@@ -224,7 +227,6 @@
     "30_Areas/020_Economía/Checklist trading.md",
     "30_Areas/030_Ocio_Cultura/Libros/Libros a leer.md",
     "30_Areas/030_Ocio_Cultura/Descargas.md",
-    "10_Inbox/Sin título.md",
-    "10_Inbox/40 lecciones a los 40.md"
+    "10_Inbox/Sin título.md"
   ]
 }
